@@ -1,4 +1,27 @@
 <% let path = jsonData.pages[pageId].path %>
 <!-- header -->
-<header>header</header>
+<header class="l-header">
+  <figure class="l-header__logo">
+    <img src="<%= path %>assets/images/common/logo001.svg" alt="サイトロゴ" />
+  </figure>
+  <div class="l-header__text-area">
+    <!-- c-text-loop -->
+    <div class="c-text-loop">
+      <div class="c-text-loop__textWrap">
+        <div class="c-text-loop__text">
+          <span
+            >What kind of sentences would be appropriate to input here?</span
+          >
+        </div>
+      </div>
+    </div>
+    <!-- c-text-loop -->
+  </div>
+  <button class="l-header__day">
+    <img src="<%= path %>assets/images/common/day.svg" alt="ライトモード" />
+  </button>
+  <button class="l-header__night">
+    <img src="<%= path %>assets/images/common/night.svg" alt="ダークモード" />
+  </button>
+</header>
 <!-- /header -->

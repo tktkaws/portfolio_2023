@@ -15,11 +15,13 @@
 @use "./layout/header";
 @use "./layout/footer";
 @use "./layout/hero";
+@use "./layout/aside";
 
 /*-------------------
 * component
 -------------------*/
 @use "./object/component/button";
+@use "./object/component/text-loop";
 
 /*-------------------
   * project

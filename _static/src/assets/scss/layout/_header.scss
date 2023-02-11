@@ -1,1 +1,56 @@
 @use "./../foundation/global" as *;
+
+.l-header {
+  z-index: 1;
+  position: fixed;
+  background-color: $c-base;
+
+  padding: 2rem;
+
+  padding-bottom: 0;
+
+  display: grid;
+  grid-template-columns: 6rem calc(100vw - 23rem) 6rem 6rem;
+
+  // border: 1px solid;
+  &__logo {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    border: 1px solid;
+    height: 4rem;
+  }
+  &__logo img {
+    width: 50%;
+    margin: 0 auto;
+  }
+  &__text-area {
+    grid-row: 1/1;
+    grid-column: 2/2;
+    border: 1px solid;
+    font-size: 4rem;
+    overflow: hidden;
+    height: 4rem;
+    margin-left: -1px;
+  }
+  &__day {
+    grid-row: 1/1;
+    grid-column: 3/3;
+    border: 1px solid;
+    height: 4rem;
+    background-color: $c-main;
+  }
+  &__day img {
+    width: 30%;
+    margin: 0 auto;
+  }
+  &__night {
+    grid-row: 1/1;
+    grid-column: 4/4;
+    border: 1px solid;
+    height: 4rem;
+  }
+  &__night img {
+    width: 20%;
+    margin: 0 auto;
+  }
+}
