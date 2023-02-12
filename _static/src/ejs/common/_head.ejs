@@ -1,5 +1,10 @@
-<% let title = (pageId === 'home') ? jsonData.siteInfo.name : jsonData.pages[pageId].name + ' | ' + jsonData.siteInfo.name%> <% let description = jsonData.pages[pageId].description %> <% let path = jsonData.pages[pageId].path %>
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/website#">
+<% let title = (pageId === 'home') ? jsonData.siteInfo.name :
+jsonData.pages[pageId].name + ' | ' + jsonData.siteInfo.name%> <% let
+description = jsonData.pages[pageId].description %> <% let path =
+jsonData.pages[pageId].path %>
+<head
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/website#"
+>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="format-detection" content="email=no, telephone=no, address=no" />
@@ -10,12 +15,28 @@
   <meta name="keywords" content="" />
   <link rel="canonical" href="<%= jsonData.siteInfo.siteUrl %>" />
   <!-- favicon -->
-  <link rel="shortcut icon" href="<%= path %>assets/images/favicon/favicon.ico" />
+  <!-- <link
+    rel="shortcut icon"
+    href="<%= path %>assets/images/favicon/favicon.ico"
+  /> -->
+  <link
+    rel="shortcut icon"
+    href="<%= path %>assets/images/common/logo001.svg"
+  />
   <!-- apple-touch-icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="<%= path %>assets/images/favicon/apple-touch-icon.png" />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="<%= path %>assets/images/favicon/apple-touch-icon.png"
+  />
   <!-- font -->
   <!-- style.css -->
   <link rel="stylesheet" href="<%= path %>assets/css/style.css" />
   <!-- Remove "outline" when in focus(other than keyboard operation) -->
-  <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js"
+    integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA"
+    crossorigin="anonymous"
+    defer
+  ></script>
 </head>

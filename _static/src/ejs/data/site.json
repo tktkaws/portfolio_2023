@@ -1,6 +1,6 @@
 {
   "siteInfo": {
-    "name": "テンプレート",
+    "name": "タカハシタカユキのポートフォリオ",
     "siteUrl": "./"
   },
   "pages": {
@@ -12,11 +12,48 @@
       "path": "./"
     },
     "about": {
-      "name": "aboutページ",
-      "description": "aboutページの説明",
+      "name": "about",
+      "description": "about",
       "type": "article",
-      "slug": "about/about.html",
+      "slug": "about/index.html",
       "path": "../"
+    },
+    "works01": {
+      "name": "Works01",
+      "description": "works01",
+      "type": "article",
+      "slug": "works/works01/index.html",
+      "path": "../../"
+    },
+    "works02": {
+      "name": "Works02",
+      "description": "works02",
+      "type": "article",
+      "slug": "works/works02/index.html",
+      "path": "../../"
+    },
+    "works03": {
+      "name": "Works03",
+      "description": "works03",
+      "type": "article",
+      "slug": "works/works03/index.html",
+      "path": "../../"
+    }
+  },
+  "container": {
+    "detail": {
+      "heading": "基本情報",
+      "desc01": "担当範囲：コーディング（TOPのみ）",
+      "desc02": "制作期間：2022.6.5 - 2022.6.10",
+      "desc03": "使用技術：HTML(Pug) / CSS(SCSS) / JavaScript",
+      "desc04": " 使用ツール：git / webpack / vscode / XD"
+    },
+    "cording": {
+      "heading": "実装内容",
+      "desc01": "swiper",
+      "desc02": "splide",
+      "desc03": "マウスストーカー",
+      "desc04": "ACF"
     }
   }
 }
