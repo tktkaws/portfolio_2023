@@ -1,0 +1,102 @@
+@use "./../../foundation/global" as *;
+
+.p-home {
+  top: 6rem;
+  margin-left: 6rem;
+  margin-right: 3rem;
+  border-right: 1px solid;
+
+  display: grid;
+  grid-template-columns: 1fr 30rem;
+  position: relative;
+  @include mq(lg) {
+    grid-template-columns: 1fr 24rem;
+  }
+  @include mq(md) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30vh 1fr;
+  }
+}
+
+.p-home {
+  &__main-container {
+    border-right: 1px solid;
+    @include mq(md) {
+      grid-row: 2/2;
+      grid-column: 1/1;
+    }
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+  }
+
+  &__card {
+    // border: 1px solid;
+    position: relative;
+  }
+  &__card {
+    a {
+      display: grid;
+    }
+  }
+  &__card {
+    figure {
+      grid-row: 1/1;
+      grid-column: 1/1;
+      overflow: hidden;
+      height: calc((100vh - 12rem) / 2);
+      @include mq(md) {
+        height: calc((70vh - 12rem) / 2);
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(58, 96, 115, 0.2),
+          rgba(58, 96, 115, 0.2)
+        );
+      }
+    }
+  }
+  &__card {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__alt-text {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    opacity: 0;
+  }
+}
+
+.p-home__card a:hover {
+  figure::after {
+    background: linear-gradient(
+      0deg,
+      rgba(58, 96, 115, 0.9),
+      rgba(58, 96, 115, 0.9)
+    );
+  }
+  .p-home__alt-text {
+    opacity: 1;
+    z-index: 1;
+    color: $c-base;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .p-home__alt-text-heading {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+}

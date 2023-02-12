@@ -20,11 +20,13 @@
 * component
 -------------------*/
 @use "./object/component/button";
+@use "./object/component/text-loop";
 
 /*-------------------
   * project
   -------------------*/
-@use "./object/project/company-access";
+@use "./object/project/home";
+@use "./object/project/home-nav";
 
 /*-------------------
   * utility

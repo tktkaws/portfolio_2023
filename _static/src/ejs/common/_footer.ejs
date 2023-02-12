@@ -1,4 +1,28 @@
 <% let path = jsonData.pages[pageId].path %>
+
+<!-- aside -->
+<aside class="l-aside">
+  <div class="l-aside__desc">
+    <small> ©Takayuki Takahashi </small>
+  </div>
+</aside>
+<!-- aside -->
 <!-- footer -->
-<footer class="">footer</footer>
+<fotter class="l-footer">
+  <div class="l-footer__inner">
+    <figure class="l-fotter-new__icon">
+      <a href="">
+        <img src="<%= path %>assets/images/common/github.svg" alt="github" />
+      </a>
+    </figure>
+    <figure class="l-fotter-new__icon">
+      <a href="">
+        <img src="<%= path %>assets/images/common/twitter.svg" alt="twitter" />
+      </a>
+    </figure>
+    <small class="l-footer__mail">
+      <a href=""> ttkaws15@gmail.com </a>
+    </small>
+  </div>
+</fotter>
 <!-- /footer -->

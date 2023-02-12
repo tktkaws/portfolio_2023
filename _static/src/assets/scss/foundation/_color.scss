@@ -1,20 +1,5 @@
-$c-main: #88b999; // archi
-$c-accent: #ebc110; // civil
-$c-base: #182f20; // housing
-$c-base-gray: #f5f5f5;
-$c-secondary: #d9e3dd;
-$c-black: #111111;
-$c-gray: #b4b4b4;
-$c-gray--lighter: #cbcbcb;
-$c-gray--darker: #dad2c6;
-$c-white: #ffffff;
-$c-twitter: #3c96eb;
-$c-facebook: #36529a;
-$c-form: #f0f0f0;
+$c-base: white;
+$c-base: #ebeef0;
 
-// 優先度1:接頭辞-セマンティックな命名
-// $c-base: #***;
-// $c-main: #***;
-// $c-accent: #***;
-// $c-primary: #***;
-// $c-secondary: #***;
+$c-main: rgba(0, 0, 0, 0.9);
+$c-main: #3a6073;

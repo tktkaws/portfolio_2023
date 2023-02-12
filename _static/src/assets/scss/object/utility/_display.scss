@@ -1,8 +1,21 @@
 @use "./../../foundation/global" as *;
 
-.u-only-sp {
+.u-only-lg {
   display: none;
-  @include mq(sm) {
+  @include mq(lg) {
     display: block;
   }
+}
+
+.b-bottom {
+  border-bottom: 1px solid;
+}
+
+.b-bottom-right {
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+.b-right {
+  border-right: 1px solid;
 }
