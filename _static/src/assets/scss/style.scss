@@ -15,7 +15,6 @@
 @use "./layout/header";
 @use "./layout/footer";
 @use "./layout/hero";
-@use "./layout/aside";
 
 /*-------------------
 * component
@@ -26,7 +25,8 @@
 /*-------------------
   * project
   -------------------*/
-@use "./object/project/company-access";
+@use "./object/project/home";
+@use "./object/project/home-nav";
 
 /*-------------------
   * utility
