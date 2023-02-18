@@ -43,10 +43,10 @@
   "container": {
     "detail": {
       "heading": "基本情報",
-      "desc01": "担当範囲：コーディング（TOPのみ）",
+      "desc01": "担当範囲：コーディング",
       "desc02": "制作期間：2022.6.5 - 2022.6.10",
-      "desc03": "使用技術：HTML(Pug) / CSS(SCSS) / JavaScript",
-      "desc04": " 使用ツール：git / webpack / vscode / XD"
+      "desc03": "使用技術：HTML(Pug) | CSS(SCSS) | JavaScript",
+      "desc04": " 使用ツール：git | webpack | vscode | XD"
     },
     "cording": {
       "heading": "実装内容",
@@ -54,6 +54,24 @@
       "desc02": "splide",
       "desc03": "マウスストーカー",
       "desc04": "ACF"
+    }
+  },
+  "info": {
+    "works01": {
+      "term": {
+        "position": "担当範囲",
+        "date": "製作期間",
+        "tech": "使用技術",
+        "work": "実装内容",
+        "github": "Github"
+      },
+      "desc": {
+        "position": "コーディング , CMS構築",
+        "date": "2022.11.01 - 2022.12.30",
+        "tech": "HTML(ejs) , CSS(SCSS) , JavaScript , git , webpack , vscode , XD",
+        "work": "Swiper , Splide , マウスストーカー , ACF , 問い合わせフォーム",
+        "github": "https://github.com/tktkaws/Fuji_WordPress"
+      }
     }
   }
 }

@@ -1,27 +1,44 @@
 <% let path = jsonData.pages[pageId].path %>
 <!-- header -->
 <header class="l-header">
-  <figure class="l-header__logo">
-    <img src="<%= path %>assets/images/common/logo001.svg" alt="サイトロゴ" />
-  </figure>
-  <div class="l-header__text-area">
-    <!-- c-text-loop -->
-    <div class="c-text-loop">
-      <div class="c-text-loop__textWrap">
-        <div class="c-text-loop__text">
-          <span
-            >What kind of sentences would be appropriate to input here?</span
-          >
+  <div class="l-header__inner">
+    <figure class="l-header__logo">
+      <a href="/">
+        <img
+          src="<%= path %>assets/images/common/logo_0218.svg"
+          alt="サイトロゴ"
+        />
+      </a>
+    </figure>
+    <div class="l-header__text-area">
+      <!-- c-text-loop -->
+      <div class="c-text-loop">
+        <div class="c-text-loop__textWrap">
+          <div class="c-text-loop__text">
+            <a href="/works/works01/index.html">
+              <span> ■ Dummy Construction company </span>
+            </a>
+            <a href="/works/works02/index.html">
+              <span> ■ Tech Blog </span>
+            </a>
+            <a href="/works/works03/index.html">
+              <span> ■ Portfolio </span>
+            </a>
+            <a href="/about/index.html">
+              <span> ■ Profile</span>
+            </a>
+
+            <!-- <span> | Tech Blog | Portfolio | Profile</span> -->
+          </div>
         </div>
       </div>
+      <!-- c-text-loop -->
     </div>
-    <!-- c-text-loop -->
+    <button class="l-header__contents">all contents</button>
   </div>
-  <button class="l-header__day">
-    <img src="<%= path %>assets/images/common/day.svg" alt="ライトモード" />
-  </button>
-  <button class="l-header__night">
+
+  <!-- <button class="l-header__night">
     <img src="<%= path %>assets/images/common/night.svg" alt="ダークモード" />
-  </button>
+  </button> -->
 </header>
 <!-- /header -->

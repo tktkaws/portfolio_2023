@@ -1,0 +1,152 @@
+<% let pageId = 'works03'; %> <% let path = jsonData.pages[pageId].path %> <%
+let cording = jsonData.container.cording; %> <% let info =
+jsonData.info.works01; %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../common/_head', {pageId:pageId }) %>
+  <body class="home" id="body">
+    <%- include('../../common/_header', {pageId:pageId }) %>
+    <div class="l-info">
+      <div class="c-title">
+        <h2>
+          <div class="c-title__heading">架空建設会社サイト</div>
+        </h2>
+        <div class="c-title__desc-wrapper">
+          <p class="c-title__desc">
+            <a href="https://f-u-j-i.ink/" target="”_blank”">
+              https://f-u-j-i.ink/
+            </a>
+          </p>
+          <p class="c-title__desc">pass:pass</p>
+          <p class="c-title__desc">user:user</p>
+        </div>
+      </div>
+      <div class="l-info__split-line"></div>
+
+      <dl class="c-desc">
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.github %></dt>
+          <dd class="c-desc__desc">
+            <a href="<%= info.desc.github %>" target="”_blank”">
+              <%= info.desc.github %>
+            </a>
+          </dd>
+        </div>
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.position %></dt>
+          <dd class="c-desc__desc"><%= info.desc.position %></dd>
+        </div>
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.date %></dt>
+          <dd class="c-desc__desc"><%= info.desc.date %></dd>
+        </div>
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.tech %></dt>
+          <dd class="c-desc__desc"><%= info.desc.tech %></dd>
+        </div>
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.work %></dt>
+          <dd class="c-desc__desc"><%= info.desc.work %></dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="l-scroll__area js-area">
+      <div class="l-scroll__wrap js-wrap">
+        <div class="l-scroll__item first js-item">
+          <figure class="l-scroll__mv">
+            <video
+              id="video01"
+              webkit-playsinline
+              playsinline
+              muted
+              autoplay
+              loop
+            >
+              <source
+                src="<%= path %>assets/images/video/fuji01.mp4"
+                type="video/mp4"
+              />
+              <source
+                src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.ogv"
+                type="video/ogv"
+              />
+              <source
+                src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.webm"
+                type="video/webm"
+              />
+              <p>動画を再生できる環境ではありません。</p>
+            </video>
+          </figure>
+        </div>
+        <div class="l-scroll__item center js-item">
+          <ul class="l-scroll__list">
+            <li class="l-scroll__list-item">
+              <img
+                src="<%= path %>assets/images/top/screencapture01.png"
+                alt="work.01"
+              />
+            </li>
+            <li class="l-scroll__list-item">
+              <img
+                src="<%= path %>assets/images/top/screencapture02.png"
+                alt="work.01"
+              />
+            </li>
+            <li class="l-scroll__list-item">
+              <img
+                src="<%= path %>assets/images/top/screencapture03.png"
+                alt="work.01"
+              />
+            </li>
+            <li class="l-scroll__list-item">
+              <img
+                src="<%= path %>assets/images/top/screencapture01.png"
+                alt="work.01"
+              />
+            </li>
+            <li class="l-scroll__list-item">
+              <img
+                src="<%= path %>assets/images/top/screencapture02.png"
+                alt="work.01"
+              />
+            </li>
+            <li class="l-scroll__list-item">
+              <img
+                src="<%= path %>assets/images/top/screencapture03.png"
+                alt="work.01"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="l-scroll__item last js-item">
+          <div class="l-other-works">
+            <div class="l-other-works__heading">Other Works</div>
+            <ul class="l-other-works__list">
+              <li class="l-other-works__card">
+                <img
+                  src="<%= path %>assets/images/top/screencapture01.png"
+                  alt="work.01"
+                />
+                <div class="l-other-works__card-title">技術ブログ</div>
+              </li>
+              <li class="l-other-works__card">
+                <img
+                  src="<%= path %>assets/images/top/screencapture02.png"
+                  alt="work.01"
+                />
+                <div class="l-other-works__card-title">ポートフォリオ</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../../common/_footer', {pageId:pageId }) %> <%-
+    include('../../common/_script', {pageId:pageId }) %> <%-
+    include('../../common/script/_script-works.ejs', {pageId:pageId }) %>
+  </body>
+</html>

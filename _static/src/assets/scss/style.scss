@@ -14,19 +14,31 @@
 *--------------------------------------*/
 @use "./layout/header";
 @use "./layout/footer";
+@use "./layout/aside";
 @use "./layout/hero";
+@use "./layout/nav";
+@use "./layout/main";
+@use "./layout/info";
+@use "./layout/scroll";
+@use "./layout/other-works";
 
 /*-------------------
 * component
 -------------------*/
 @use "./object/component/button";
 @use "./object/component/text-loop";
+@use "./object/component/slide";
+@use "./object/component/block";
+@use "./object/component/title";
+@use "./object/component/desc";
 
 /*-------------------
   * project
   -------------------*/
 @use "./object/project/home";
 @use "./object/project/home-nav";
+@use "./object/project/works";
+@use "./object/project/works-info";
 
 /*-------------------
   * utility
@@ -35,5 +47,5 @@
 /*-------------------
   * lib
   -------------------*/
-// @use "./lib/splide.min.css";
+@use "./lib/splide.min.css";
 // @use "./lib/swiper.min.css";
