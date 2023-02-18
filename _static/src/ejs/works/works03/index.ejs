@@ -7,6 +7,50 @@ jsonData.info.works01; %>
   <%- include('../../common/_head', {pageId:pageId }) %>
   <body class="home" id="body">
     <%- include('../../common/_header', {pageId:pageId }) %>
+    <div class="l-info">
+      <div class="c-title">
+        <h2>
+          <div class="c-title__heading">架空建設会社サイト</div>
+        </h2>
+        <div class="c-title__desc-wrapper">
+          <p class="c-title__desc">
+            <a href="https://f-u-j-i.ink/" target="”_blank”">
+              https://f-u-j-i.ink/
+            </a>
+          </p>
+          <p class="c-title__desc">pass:pass</p>
+          <p class="c-title__desc">user:user</p>
+        </div>
+      </div>
+      <div class="l-info__split-line"></div>
+
+      <dl class="c-desc">
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.github %></dt>
+          <dd class="c-desc__desc">
+            <a href="<%= info.desc.github %>" target="”_blank”">
+              <%= info.desc.github %>
+            </a>
+          </dd>
+        </div>
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.position %></dt>
+          <dd class="c-desc__desc"><%= info.desc.position %></dd>
+        </div>
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.date %></dt>
+          <dd class="c-desc__desc"><%= info.desc.date %></dd>
+        </div>
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.tech %></dt>
+          <dd class="c-desc__desc"><%= info.desc.tech %></dd>
+        </div>
+        <div class="c-desc__list">
+          <dt class="c-desc__term"><%= info.term.work %></dt>
+          <dd class="c-desc__desc"><%= info.desc.work %></dd>
+        </div>
+      </dl>
+    </div>
 
     <div class="l-scroll__area js-area">
       <div class="l-scroll__wrap js-wrap">
@@ -100,50 +144,7 @@ jsonData.info.works01; %>
         </div>
       </div>
     </div>
-    <div class="l-info">
-      <div class="c-title">
-        <h2>
-          <div class="c-title__heading">架空建設会社サイト</div>
-        </h2>
-        <div class="c-title__desc-wrapper">
-          <p class="c-title__desc">
-            <a href="https://f-u-j-i.ink/" target="”_blank”">
-              https://f-u-j-i.ink/
-            </a>
-          </p>
-          <p class="c-title__desc">pass:pass</p>
-          <p class="c-title__desc">user:user</p>
-        </div>
-      </div>
-      <div class="l-info__split-line"></div>
 
-      <dl class="c-desc">
-        <div class="c-desc__list">
-          <dt class="c-desc__term"><%= info.term.github %></dt>
-          <dd class="c-desc__desc">
-            <a href="<%= info.desc.github %>" target="”_blank”">
-              <%= info.desc.github %>
-            </a>
-          </dd>
-        </div>
-        <div class="c-desc__list">
-          <dt class="c-desc__term"><%= info.term.position %></dt>
-          <dd class="c-desc__desc"><%= info.desc.position %></dd>
-        </div>
-        <div class="c-desc__list">
-          <dt class="c-desc__term"><%= info.term.date %></dt>
-          <dd class="c-desc__desc"><%= info.desc.date %></dd>
-        </div>
-        <div class="c-desc__list">
-          <dt class="c-desc__term"><%= info.term.tech %></dt>
-          <dd class="c-desc__desc"><%= info.desc.tech %></dd>
-        </div>
-        <div class="c-desc__list">
-          <dt class="c-desc__term"><%= info.term.work %></dt>
-          <dd class="c-desc__desc"><%= info.desc.work %></dd>
-        </div>
-      </dl>
-    </div>
     <%- include('../../common/_footer', {pageId:pageId }) %> <%-
     include('../../common/_script', {pageId:pageId }) %> <%-
     include('../../common/script/_script-works.ejs', {pageId:pageId }) %>

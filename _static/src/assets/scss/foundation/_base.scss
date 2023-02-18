@@ -12,6 +12,7 @@ body {
   letter-spacing: 0.5em;
   font-size: 16px;
   line-height: 1.5;
+  font-family: $f-base;
 }
 
 img,
@@ -21,6 +22,9 @@ object {
   height: auto;
   border: none;
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 a {

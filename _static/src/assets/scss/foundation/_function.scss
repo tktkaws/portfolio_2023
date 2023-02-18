@@ -15,6 +15,21 @@
   @return clamp($min-size / 16 * 1rem, $fluid-size, $max-size / 16 * 1rem);
 }
 
+// @function fluid($min-size, $max-size, $min-viewport, $max-viewport) {
+//   /* a 傾き */
+//   $slope: calc(($max-size - $min-size) / ($max-viewport - $min-viewport));
+
+//   /* b 切片 */
+//   $intercept: calc($min-size - $slope * $min-viewport);
+
+//   /* y = ax + b 可変サイズ */
+//   $fluid-size: calc($slope * 100vw + $intercept / 10 * 1rem);
+
+//   /* clamp(最小サイズ, 可変サイズ, 最大サイズ) */
+//   @return clamp($min-size / 10 * 1rem, $fluid-size, $max-size / 10 * 1rem);
+// }
+
+// px指定
 @function fluid($min-size, $max-size, $min-viewport, $max-viewport) {
   /* a 傾き */
   $slope: calc(($max-size - $min-size) / ($max-viewport - $min-viewport));
@@ -23,8 +38,8 @@
   $intercept: calc($min-size - $slope * $min-viewport);
 
   /* y = ax + b 可変サイズ */
-  $fluid-size: calc($slope * 100vw + $intercept / 10 * 1rem);
+  $fluid-size: calc($slope * 100vw + $intercept * 1px);
 
   /* clamp(最小サイズ, 可変サイズ, 最大サイズ) */
-  @return clamp($min-size / 10 * 1rem, $fluid-size, $max-size / 10 * 1rem);
+  @return clamp($min-size * 1px, $fluid-size, $max-size * 1px);
 }
