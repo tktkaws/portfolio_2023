@@ -1,0 +1,44 @@
+@use "./../foundation/global" as *;
+
+.l-info {
+  background-color: $c-base;
+  z-index: 2;
+  position: fixed;
+  top: 6rem;
+  width: 30rem;
+  left: 2rem;
+  height: calc(100vh - 8rem);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  border-right: 1px solid;
+  // border-bottom: 1px solid;
+
+  &__inner {
+    // position: sticky;
+    // overflow-y: scroll;
+
+    right: 2rem;
+    top: 6rem;
+    width: 100%;
+    height: calc(100vh - 12rem);
+    height: calc(100vh - 28rem);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  &__title {
+  }
+  &__split-line {
+    width: 96%;
+    margin: 0 auto;
+    height: 1px;
+    background: $c-main;
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,54 @@
+@use "./../foundation/global" as *;
+.l-scroll {
+  &__area {
+    overflow: hidden;
+  }
+  &__wrap {
+    display: flex;
+  }
+
+  // scrolledPanel
+  &__item {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__list {
+    // background-color: $c-main;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: right;
+    align-items: center;
+  }
+  &__list-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 20rem;
+    height: 100%;
+    height: 80vh;
+    height: calc(100vh - 16rem);
+  }
+
+  &__item.first {
+    // background-color: $c-main;
+    padding-left: 32rem;
+    padding-right: 2rem;
+  }
+  &__mv {
+    width: 94%;
+    height: calc(100vh - 16rem);
+  }
+
+  &__item.center {
+    // background-color: $c-main;
+  }
+
+  &__item.last {
+    // background-color: $c-main;
+    // color: $c-base;
+    padding-left: 32rem;
+    padding-right: 2rem;
+  }
+}

@@ -11,6 +11,7 @@ module.exports = {
   entry: {
     common: path.join(__dirname, "_static", "src", "assets", "js", "common.js"),
     top: path.join(__dirname, "_static", "src", "assets", "js", "top.js"),
+    works: path.join(__dirname, "_static", "src", "assets", "js", "works.js"),
   },
 
   // ファイルの出力設定
