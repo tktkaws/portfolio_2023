@@ -50,4 +50,10 @@
     background: $c-main;
     opacity: 0.2;
   }
+  &__image {
+    width: 96%;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+  }
 }

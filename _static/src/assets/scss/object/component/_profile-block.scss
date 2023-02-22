@@ -1,0 +1,95 @@
+@use "./../../foundation/global" as *;
+
+.c-profile-block {
+  // & > * {
+  //   border: solid 1px;
+  // }
+  // & > * > * {
+  //   border: solid 1px;
+  // }
+  width: 32rem;
+  @include mq(xl) {
+    width: 24rem;
+  }
+  @include mq(lg) {
+    width: 24rem;
+  }
+  @include mq(md) {
+    width: 100%;
+    padding-left: 2rem;
+    padding-top: 5rem;
+  }
+
+  display: grid;
+  grid-template-rows: 3rem 20rem 20rem;
+  @include mq(lg) {
+    grid-template-rows: 3rem 1fr 3rem;
+  }
+  @include mq(md) {
+    display: block;
+  }
+  &__heading {
+    font-size: fluid(28, 36, 1441, 2550);
+    font-weight: bold;
+    // font-size: 36px;
+
+    padding-bottom: 1rem;
+    @include mq(xl) {
+      font-size: 28px;
+    }
+    @include mq(lg) {
+      font-size: 20px;
+    }
+    @include mq(md) {
+      font-size: 16px;
+    }
+  }
+  &__desc {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    line-height: 2;
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include mq(md) {
+      justify-content: left;
+      gap: 5rem;
+      padding-top: 3rem;
+    }
+  }
+  &__card {
+    width: 40%;
+    @include mq(lg) {
+      visibility: hidden;
+    }
+    @include mq(md) {
+      visibility: visible;
+      width: 25%;
+    }
+  }
+  &__image {
+    aspect-ratio: 1/1;
+  }
+
+  &__card-desc {
+    // border-top: 1px solid;
+    padding: 1rem;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    @include mq(xl) {
+      letter-spacing: 0.1em;
+    }
+  }
+  &__desc p {
+    line-height: 2;
+  }
+}

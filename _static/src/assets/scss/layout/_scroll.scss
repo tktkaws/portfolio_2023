@@ -24,12 +24,12 @@
     @include mq(md) {
       height: 100%;
     }
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include mq(md) {
-      flex-direction: column;
-    }
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // @include mq(md) {
+    //   flex-direction: column;
+    // }
   }
   &__list {
     width: 100%;
@@ -56,35 +56,63 @@
   }
 
   &__item.first {
-    // background-color: $c-main;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
     padding-left: 32rem;
-    padding-right: 2rem;
+    @include mq(xl) {
+      padding-left: 26rem;
+      // margin-left: 26rem;
+    }
+    @include mq(lg) {
+      flex-direction: column;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
     @include mq(md) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
       padding-left: 2rem;
       padding-right: 2rem;
     }
   }
-  &__mv {
-    width: 94%;
-    height: calc(100vh - 16rem);
-    @include mq(md) {
-      height: 100%;
-    }
-  }
 
   &__item.center {
-    // background-color: $c-main;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include mq(md) {
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   &__item.last {
     // background-color: $c-main;
     // color: $c-base;
     padding-left: 32rem;
-    padding-right: 2rem;
+    @include mq(xl) {
+      padding-left: 26rem;
+    }
     @include mq(md) {
       padding-left: 2rem;
       padding-right: 2rem;
-      visibility: hidden;
+      // visibility: hidden;
+    }
+  }
+
+  &__mv {
+    width: 94%;
+    height: calc(100vh - 16rem);
+    @include mq(md) {
+      height: 100%;
     }
   }
 }
