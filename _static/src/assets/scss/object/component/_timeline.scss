@@ -1,83 +1,128 @@
 @use "./../../foundation/global" as *;
-
 .c-timeline {
-  width: 80%;
-  justify-self: center;
+  // & > * {
+  //   border: solid 1px;
+  // }
+  // & > * > * {
+  //   border: solid 1px;
+  // }
+  margin: 0 auto;
+
+  &__heading {
+    font-size: fluid(28, 36, 1441, 2550);
+    font-weight: bold;
+
+    padding: 1rem;
+    padding-bottom: 3rem;
+    @include mq(xl) {
+      font-size: 28px;
+    }
+    @include mq(lg) {
+      font-size: 20px;
+    }
+    @include mq(md) {
+      font-size: 16px;
+    }
+  }
   &__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 2rem;
+    @include mq(md) {
+      flex-direction: column;
+      margin-left: 2rem;
+    }
   }
   &__item {
     display: flex;
+    flex-direction: column;
+    width: calc(100vw / 5);
+
+    @include mq(md) {
+      position: relative;
+      width: 100%;
+      &::before {
+        content: "";
+        display: block;
+        background-color: $c-main;
+        position: absolute;
+        margin: auto;
+        top: 22px;
+        left: -1rem;
+
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+      }
+      &::after {
+        content: "";
+        background-color: $c-main;
+        display: block;
+        position: absolute;
+        // right: 50%;
+        top: 46px;
+        left: -10px;
+        height: 98%;
+        width: 3px;
+      }
+    }
   }
   &__date {
-    width: 200px;
-    font-size: 24px;
-    text-align: center;
-  }
-  &__card {
-    display: flex;
-    flex-direction: column;
-    border-left: solid 2px;
-    padding-left: 32px;
-    padding-bottom: 32px;
-    width: 600px;
+    font-size: fluid(24, 24, 1441, 2550);
+    // font-weight: bold;
+    // font-size: 36px;
+
+    padding: 1rem;
+
+    @include mq(xl) {
+      font-size: 24px;
+    }
+    @include mq(lg) {
+      font-size: 18px;
+    }
+    @include mq(md) {
+      font-size: 16px;
+    }
 
     position: relative;
+
     &::before {
       content: "";
       display: block;
-      width: 12px;
-      height: 12px;
       background-color: $c-main;
       position: absolute;
-      left: -7px;
-      top: 8px;
+      margin: auto;
+      bottom: -1rem;
+      left: 1rem;
+      width: 1rem;
+      height: 1rem;
       border-radius: 100%;
+      // border-radius: 100px;
+      @include mq(md) {
+        visibility: hidden;
+      }
+    }
+    &::after {
+      content: "";
+      background-color: $c-main;
+      display: block;
+      position: absolute;
+      // right: 50%;
+      left: 40px;
+      bottom: -8px;
+      width: 100%;
+      width: 98%;
+      height: 1px;
+      @include mq(md) {
+        visibility: hidden;
+      }
     }
   }
-  &__heading {
-    font-size: 24px;
-  }
   &__desc {
-    margin-top: 1rem;
-  }
-}
-
-.timeline {
-  list-style: none;
-}
-.timeline > li {
-  margin-bottom: 60px;
-}
-
-/* for Desktop */
-@media (min-width: 640px) {
-  .timeline > li {
-    overflow: hidden;
-    margin: 0;
-    position: relative;
-  }
-  .timeline-date {
-    width: 110px;
-    float: left;
-    margin-top: 20px;
-  }
-  .timeline-content {
-    width: 75%;
-    float: left;
-    border-left: 2px $c-main solid;
-    padding-left: 30px;
-  }
-  .timeline-content:before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background: #6fc173;
-    background-color: $c-main;
-    position: absolute;
-    left: 106px;
-    top: 24px;
-    border-radius: 100%;
+    padding: 1rem;
+    padding-top: 3rem;
+    @include mq(md) {
+      padding-top: 1rem;
+    }
   }
 }

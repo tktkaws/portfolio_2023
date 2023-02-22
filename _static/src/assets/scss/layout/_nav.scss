@@ -1,0 +1,157 @@
+@use "./../foundation/global" as *;
+
+.l-header {
+  &__navbtn {
+    width: max(46px, 2vw);
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    color: $c-main;
+    z-index: 200;
+  }
+  &__sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  &__navbtn-bar {
+  }
+}
+
+.l-header__navbtn-bar,
+.l-header__navbtn::before,
+.l-header__navbtn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  grid-area: 1/1;
+  transition: transform 0.5s;
+}
+
+.l-header__navbtn::before {
+  transform: translateY(-12px);
+}
+
+.l-header__navbtn::after {
+  transform: translateY(12px);
+}
+
+.nav-body .l-header__navbtn-bar {
+  transform: scale(0);
+}
+
+.nav-body .l-header__navbtn::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.nav-body .l-header__navbtn::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.nav-body .l-header__navbtn {
+  color: $c-main;
+  // z-index: 200;
+}
+
+.nav-body .l-nav {
+  z-index: 100;
+  visibility: visible;
+  opacity: 1;
+}
+
+.l-nav {
+  border: solid 1px;
+  position: fixed;
+  top: 6rem;
+  top: calc(6rem + 2px);
+  left: 2rem;
+  width: calc(100vw - 5rem - 2px);
+  height: calc(100vh - 8rem - 2px);
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  background-color: $c-main;
+  background-color: $c-base;
+  visibility: hidden;
+}
+
+.l-nav {
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  @include mq(xl) {
+    grid-template-columns: 24rem 1fr;
+  }
+  @include mq(lg) {
+    display: block;
+  }
+  &__title {
+    grid-column: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(lg) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+  &__title img {
+    width: 15rem;
+    height: 15rem;
+    border: solid 1px $c-main;
+    @include mq(md) {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+  &__contents {
+    grid-column: 2/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    color: $c-main;
+    padding: 2rem;
+  }
+  &__heading {
+    font-size: fluid(28, 36, 1441, 2550);
+    font-weight: bold;
+    padding-bottom: 1rem;
+    @include mq(xl) {
+      font-size: 28px;
+    }
+    @include mq(lg) {
+      font-size: 20px;
+    }
+    @include mq(md) {
+      font-size: 16px;
+    }
+  }
+  &__list {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-content: left;
+    gap: min(10%, 10rem);
+  }
+  &__item {
+    width: 25%;
+    width: min(25vh, 25%);
+  }
+  &__image {
+    height: 25vh;
+    @include mq(xl) {
+      height: 15rem;
+    }
+    @include mq(lg) {
+      height: 10rem;
+    }
+  }
+}
