@@ -1,7 +1,7 @@
 @use "./../foundation/global" as *;
 
 .l-header {
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   background-color: $c-base;
   padding: 2rem 3rem 0 2rem;
@@ -19,13 +19,14 @@
     grid-column: 1/1;
     height: 4rem;
     background-color: $c-base;
+    // border: solid 1px;
+    border-right: solid 1px;
   }
 
   &__text-area {
     grid-row: 1/1;
     grid-column: 2/2;
 
-    font-size: 4rem;
     overflow: hidden;
     height: 4rem;
     // margin-left: -1px;
@@ -41,9 +42,75 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.2em;
+    position: relative;
+    overflow: hidden;
   }
   &__contents:hover {
     background-color: $c-main;
     color: $c-base;
   }
+  &__main {
+    opacity: 1;
+  }
+  &__nav-only {
+    visibility: hidden;
+  }
+}
+
+.nav-body .l-header__contents {
+  background-color: $c-main;
+  color: $c-base;
+
+  &::after {
+    display: block;
+    background-color: $c-main;
+    color: $c-base;
+    content: "close";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// テキストループ
+.l-header__list {
+  display: flex;
+  letter-spacing: 0.2em;
+}
+
+.l-header__item {
+  margin-right: 1rem;
+  a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 80px;
+  }
+}
+
+.l-header__item span {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transition: all 0.5s;
+  transform: translate(-50%, 0);
+  display: block;
+  opacity: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.l-header__item span:nth-child(2) {
+  opacity: 0;
+  transform: translate(-50%, 100%);
+}
+.l-header__item:hover span:nth-child(1) {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}
+
+.l-header__item:hover span:nth-child(2) {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }

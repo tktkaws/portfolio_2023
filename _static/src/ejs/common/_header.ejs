@@ -5,7 +5,7 @@
     <figure class="l-header__logo">
       <a href="/">
         <img
-          src="<%= path %>assets/images/common/logo_0218.svg"
+          src="<%= path %>assets/images/common/logo0225.svg"
           alt="サイトロゴ"
         />
       </a>
@@ -15,18 +15,28 @@
       <div class="c-text-loop">
         <div class="c-text-loop__textWrap">
           <div class="c-text-loop__text">
-            <a href="/works/works01/index.html">
-              <span> ■ Dummy Construction company </span>
-            </a>
-            <a href="/works/works02/index.html">
-              <span> ■ Tech Blog </span>
-            </a>
-            <a href="/works/works03/index.html">
-              <span> ■ Portfolio </span>
-            </a>
-            <a href="/profile/index.html">
-              <span> ■ Profile</span>
-            </a>
+            <ul class="l-header__list">
+              <li class="l-header__item">
+                <a href="/works/works01/index.html">
+                  <span>works01</span><span>架空建設会社</span></a
+                >
+              </li>
+              <li class="l-header__item">
+                <a href="/works/works02/index.html">
+                  <span>works02</span><span>技術ブログ</span></a
+                >
+              </li>
+              <li class="l-header__item">
+                <a href="/works/works03/index.html">
+                  <span>works03</span><span>ポートフォリオ</span></a
+                >
+              </li>
+              <li class="l-header__item">
+                <a href="/about/index.html">
+                  <span>about</span><span>タカハシタカユキ</span></a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -36,79 +46,68 @@
   </div>
   <nav class="l-nav">
     <div class="l-nav__title">
-      <img
-        src="<%= path %>assets/images/common/logo002.svg"
-        alt="タカハシタカユキのポートフォリオ"
-      />
+      <div class="l-nav__heading">全てのコンテンツ</div>
     </div>
-    <div class="l-nav__contents">
-      <div class="l-nav__heading">制作物</div>
-      <ul class="l-nav__list">
-        <li class="l-nav__item">
-          <a href="">
+
+    <ul class="l-nav__list">
+      <li class="l-nav__item">
+        <a href="/works/works01/index.html" class="l-nav__item-inner">
+          <figure class="l-nav__image">
             <img
-              class="l-nav__image"
               src="<%= path %>assets/images/top/screencapture01.png"
               alt="work.01"
             />
-            <div class="l-nav__desc">架空建設会社サイト</div>
-          </a>
-        </li>
-        <li class="l-nav__item">
-          <a href="">
+          </figure>
+          <div class="l-nav__body">
+            <div class="l-nav__desc-heading">架空建設会社サイト</div>
+            <div class="l-nav__desc">WordPress</div>
+          </div>
+        </a>
+      </li>
+      <li class="l-nav__item">
+        <a href="/works/works02/index.html" class="l-nav__item-inner">
+          <figure class="l-nav__image">
             <img
-              class="l-nav__image"
               src="<%= path %>assets/images/top/screencapture01.png"
               alt="work.01"
             />
-            <div class="l-nav__desc">技術ブログ</div>
-          </a>
-        </li>
-        <li class="l-nav__item">
-          <a href="">
+          </figure>
+          <div class="l-nav__body">
+            <div class="l-nav__desc-heading">技術ブログ</div>
+            <div class="l-nav__desc">Next.js</div>
+            <div class="l-nav__desc">microCMS</div>
+          </div>
+        </a>
+      </li>
+      <li class="l-nav__item">
+        <a href="/works/works03/index.html" class="l-nav__item-inner">
+          <figure class="l-nav__image">
             <img
-              class="l-nav__image"
               src="<%= path %>assets/images/top/screencapture01.png"
               alt="work.01"
             />
-            <div class="l-nav__desc">ポートフォリオ</div>
-          </a>
-        </li>
-      </ul>
-      <div class="l-nav__heading">プロフィール　・　ブログ</div>
-      <ul class="l-nav__list">
-        <li class="l-nav__item">
-          <a href="">
+          </figure>
+          <div class="l-nav__body">
+            <div class="l-nav__desc-heading">ポートフォリオ</div>
+            <div class="l-nav__desc">EJS</div>
+            <div class="l-nav__desc">webpack</div>
+          </div>
+        </a>
+      </li>
+      <li class="l-nav__item">
+        <a href="/about/index.html" class="l-nav__item-inner">
+          <figure class="l-nav__image">
             <img
-              class="l-nav__image"
               src="<%= path %>assets/images/top/screencapture01.png"
               alt="work.01"
             />
-            <div class="l-nav__desc">プロフィール</div>
-          </a>
-        </li>
-        <li class="l-nav__item">
-          <a href="">
-            <img
-              class="l-nav__image"
-              src="<%= path %>assets/images/top/screencapture01.png"
-              alt="work.01"
-            />
-            <div class="l-nav__desc">CSS設計について</div>
-          </a>
-        </li>
-        <li class="l-nav__item">
-          <a href="">
-            <img
-              class="l-nav__image"
-              src="<%= path %>assets/images/top/screencapture01.png"
-              alt="work.01"
-            />
-            <div class="l-nav__desc">環境構築について</div>
-          </a>
-        </li>
-      </ul>
-    </div>
+          </figure>
+          <div class="l-nav__body">
+            <div class="l-nav__desc-heading">about</div>
+          </div>
+        </a>
+      </li>
+    </ul>
   </nav>
 </header>
 <!-- /header -->
