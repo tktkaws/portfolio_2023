@@ -24,6 +24,10 @@
     align-items: center;
     gap: 2rem;
     padding-right: 2rem;
+    @include mq(sm) {
+      gap: 0;
+      padding-right: 1rem;
+    }
   }
   &__icons {
     display: flex;
@@ -31,10 +35,18 @@
     gap: 2rem;
     padding-right: 2rem;
     padding-left: 2rem;
+    height: 1.5rem;
+    @include mq(sm) {
+      visibility: hidden;
+      padding: 0;
+    }
   }
   &__icon {
-    color: $c-main;
   }
   &__credit {
+    @include mq(sm) {
+      // font-size: 10px;
+      letter-spacing: 0.2em;
+    }
   }
 }

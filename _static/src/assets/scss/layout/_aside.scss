@@ -17,6 +17,9 @@
     position: fixed;
     top: calc(6rem + 2px);
     width: calc(2rem + 4px);
+    width: calc(3rem + 3px);
+    left: calc(100vw - 3rem - 3px);
+    // width: calc(100vw - 5rem - 2px);
     // @include mq(md) {
     //   width: calc(2rem + 4px);
     // }

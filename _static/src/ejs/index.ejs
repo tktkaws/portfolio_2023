@@ -2,157 +2,135 @@
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('./common/_head', {pageId:pageId }) %>
-  <body class="home">
+  <body class="home" id="body">
     <div id="top" class="wrap" ontouchstart="">
       <%- include('./common/_header', {pageId:pageId }) %>
       <!-- main -->
-      <main class="p-home">
-        <nav class="p-home-nav">
-          <h1 class="p-home-nav__title b-bottom">
-            <img
-              src="<%= path %>assets/images/common/title.svg"
-              alt="タカハシタカユキのポートフォリオ"
-            />
-          </h1>
-          <ul class="p-home-nav__menu">
-            <li class="p-home-nav__item b-bottom-right">
-              <a href="/works/works01/index.html">
-                <div class="p-home-nav__menu-heading">01</div>
-                <div class="p-home-nav__menu-heading">
-                  架空建設会社<br class="u-only-lg" />サイト
-                </div>
-              </a>
-            </li>
-            <li class="p-home-nav__item b-bottom">
-              <a href="">
-                <div class="p-home-nav__menu-heading">02</div>
-                <div class="p-home-nav__menu-heading">技術ブログ</div>
-              </a>
-            </li>
-            <li class="p-home-nav__item b-right">
-              <a href="">
-                <div class="p-home-nav__menu-heading">03</div>
-                <div class="p-home-nav__menu-heading">ポートフォリオ</div>
-              </a>
-            </li>
-            <li class="p-home-nav__item">
-              <a href="">
-                <div class="p-home-nav__menu-heading">04</div>
-                <div class="p-home-nav__menu-heading">プロフィール</div>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- <div class="p-home__menu-area"></div> -->
-        <div class="p-home__main-container">
-          <div class="p-home__card" id="works-01">
-            <a href="">
-              <figure>
-                <picture>
-                  <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.webp"
-                      media="(min-width: 769px)" type="image/webp" /> -->
-                  <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.jpg"
-                      media="(min-width: 769px)" type="image/jpg" /> -->
-                  <!-- <source
-                      srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service_sp.webp"
-                      type="image/webp" /> -->
-                  <img
-                    src="<%= path %>assets/images/top/screencapture01.png"
-                    alt="架空建設会社サイトのイメージ"
-                  />
-                </picture>
-              </figure>
-              <div class="p-home__alt-text">
-                <div class="p-home__alt-text-heading">01</div>
-                <div class="p-home__alt-text-heading">架空建設会社サイト</div>
-                <div class="p-home__alt-text-heading">
-                  Wordpress <br class="u-only-lg" />ejs
-                  <br class="u-only-lg" />webpack
-                </div>
+      <main class="l-main">
+        <div class="l-main__title">
+          <img
+            src="<%= path %>assets/images/common/title0225.svg"
+            alt="タカハシタカユキのポートフォリオ"
+          />
+        </div>
+        <div class="l-main__loop">
+          <div class="loop">
+            <a href="/works/works01/index.html">
+              <div class="loop__box right">
+                <img
+                  src="<%= path %>assets/images/home/company10.png"
+                  alt="架空建設会社サイト"
+                />
+                <img
+                  src="<%= path %>assets/images/home/company10.png"
+                  alt="架空建設会社サイト"
+                />
               </div>
             </a>
           </div>
-          <div class="p-home__card" id="works-02">
-            <a href="">
-              <figure>
-                <picture>
-                  <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.webp"
-                      media="(min-width: 769px)" type="image/webp" /> -->
-                  <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.jpg"
-                      media="(min-width: 769px)" type="image/jpg" /> -->
-                  <!-- <source
-                      srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service_sp.webp"
-                      type="image/webp" /> -->
-                  <img
-                    src="<%= path %>assets/images/top/screencapture02.png"
-                    alt="技術ブログのイメージ"
-                  />
-                </picture>
-              </figure>
-              <div class="p-home__alt-text">
-                <div class="p-home__alt-text-heading">02</div>
-                <div class="p-home__alt-text-heading">技術ブログ</div>
-                <div class="p-home__alt-text-heading">
-                  next.js <br class="u-only-lg" />tailwind
-                </div>
+          <div class="loop">
+            <a href="/works/works02/index.html">
+              <div class="loop__box fast">
+                <img
+                  src="<%= path %>assets/images/home/blog11.png"
+                  alt="技術ブログ"
+                />
+                <img
+                  src="<%= path %>assets/images/home/blog11.png"
+                  alt="技術ブログ"
+                />
               </div>
             </a>
           </div>
-          <div class="p-home__card" id="works-03">
-            <a href="">
-              <figure>
-                <picture>
-                  <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.webp"
-                      media="(min-width: 769px)" type="image/webp" /> -->
-                  <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.jpg"
-                      media="(min-width: 769px)" type="image/jpg" /> -->
-                  <!-- <source
-                      srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service_sp.webp"
-                      type="image/webp" /> -->
-                  <img
-                    src="<%= path %>assets/images/top/screencapture03.png"
-                    alt="ポートフォリオのイメージ"
-                  />
-                </picture>
-              </figure>
-              <div class="p-home__alt-text">
-                <div class="p-home__alt-text-heading">03</div>
-                <div class="p-home__alt-text-heading">ポートフォリオ</div>
-                <div class="p-home__alt-text-heading">
-                  ejs <br class="u-only-lg" />webpack
-                  <br class="u-only-lg" />barba.js
-                </div>
+          <div class="loop">
+            <a href="/works/works03/index.html">
+              <div class="loop__box right fast">
+                <img
+                  src="<%= path %>assets/images/home/portfolio11.png"
+                  alt="ポートフォリオ"
+                />
+                <img
+                  src="<%= path %>assets/images/home/portfolio11.png"
+                  alt="ポートフォリオ"
+                />
               </div>
             </a>
           </div>
-          <div class="p-home__card" id="works-04">
-            <a href="">
-              <figure>
-                <picture>
-                  <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.webp"
-                      media="(min-width: 769px)" type="image/webp" /> -->
-                  <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.jpg"
-                      media="(min-width: 769px)" type="image/jpg" /> -->
-                  <!-- <source
-                      srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service_sp.webp"
-                      type="image/webp" /> -->
-                  <img
-                    src="<%= path %>assets/images/top/screencapture04.png"
-                    alt="プロフィールページのイメージ"
-                  />
-                </picture>
-              </figure>
-              <div class="p-home__alt-text">
-                <div class="p-home__alt-text-heading">04</div>
-                <div class="p-home__alt-text-heading">プロフィール</div>
-                <div class="p-home__alt-text-heading"></div>
+          <div class="loop">
+            <a href="/about/index.html">
+              <div class="loop__box">
+                <img
+                  src="<%= path %>assets/images/home/about11.png"
+                  alt="製作者について"
+                />
+                <img
+                  src="<%= path %>assets/images/home/about11.png"
+                  alt="製作者について"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="loop">
+            <a href="/works/works01/index.html">
+              <div class="loop__box right">
+                <img
+                  src="<%= path %>assets/images/home/company10.png"
+                  alt="架空建設会社サイト"
+                />
+                <img
+                  src="<%= path %>assets/images/home/company10.png"
+                  alt="架空建設会社サイト"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="loop">
+            <a href="/works/works02/index.html">
+              <div class="loop__box fast">
+                <img
+                  src="<%= path %>assets/images/home/blog11.png"
+                  alt="技術ブログ"
+                />
+                <img
+                  src="<%= path %>assets/images/home/blog11.png"
+                  alt="技術ブログ"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="loop">
+            <a href="/works/works03/index.html">
+              <div class="loop__box right fast">
+                <img
+                  src="<%= path %>assets/images/home/portfolio11.png"
+                  alt="ポートフォリオ"
+                />
+                <img
+                  src="<%= path %>assets/images/home/portfolio11.png"
+                  alt="ポートフォリオ"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="loop">
+            <a href="/about/index.html">
+              <div class="loop__box">
+                <img
+                  src="<%= path %>assets/images/home/about11.png"
+                  alt="製作者について"
+                />
+                <img
+                  src="<%= path %>assets/images/home/about11.png"
+                  alt="製作者について"
+                />
               </div>
             </a>
           </div>
         </div>
       </main>
       <!-- /main -->
-      <%- include('./common/_footer', {pageId:pageId }) %>
+      <%- include('./common/_footer', {pageId:pageId }) %> <%-
+      include('./common/_script', {pageId:pageId }) %>
     </div>
   </body>
 </html>

@@ -1,4 +1,5 @@
 @use "./../../foundation/global" as *;
+
 .c-text-loop {
   position: relative;
   height: 10rem;
@@ -6,7 +7,8 @@
   display: block;
   &__textWrap {
     position: absolute;
-    bottom: 0;
+    // bottom: 0;
+    top: 22px;
     display: block;
     overflow: hidden;
     width: 100%;
@@ -17,17 +19,13 @@
     margin: 0;
     padding-left: 100%;
     white-space: nowrap;
-    font-size: 2rem;
+    // font-size: 1.5rem;
     line-height: 1.2;
-    // letter-spacing: 0em;
-    // font-weight: 600;
-    // font-size: 10rem;
-    // line-height: 1.12;
-    animation: loopText 16s linear infinite;
-    // span {
-    //   font-family: $f-en;
-    //   text-transform: uppercase;
-    // }
+
+    animation: loopText 32s linear infinite;
+  }
+  &__text.right {
+    animation: loopTextRight 16s linear infinite;
   }
 }
 
@@ -37,5 +35,100 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes loopTextRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.loop {
+  padding-top: 10px;
+  overflow: hidden;
+}
+.loop__box {
+  display: flex;
+  width: 100vw;
+}
+.loop__box img {
+  // min-width: 100vw;
+  // 高さ調節
+  min-width: 2500px;
+  // min-width: 120vw;
+}
+.loop__box img:first-child {
+  animation: loop 50s -25s linear infinite;
+}
+.loop__box img:last-child {
+  animation: loop2 50s linear infinite;
+}
+.loop__box.fast img:first-child {
+  animation: loop 30s -15s linear infinite;
+}
+.loop__box.fast img:last-child {
+  animation: loop2 30s linear infinite;
+}
+.loop__box.lazy img:first-child {
+  animation: loop 70s -35s linear infinite;
+}
+.loop__box.lazy img:last-child {
+  animation: loop2 70s linear infinite;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+// right
+.loop__box.right img:first-child {
+  animation: loopRight 50s -25s linear infinite;
+}
+.loop__box.right img:last-child {
+  animation: loopRight2 50s linear infinite;
+}
+.loop__box.right.fast img:first-child {
+  animation: loopRight 20s -10s linear infinite;
+}
+.loop__box.right.fast img:last-child {
+  animation: loopRight2 20s linear infinite;
+}
+.loop__box.right.lazy img:first-child {
+  animation: loopRight 70s -35s linear infinite;
+}
+.loop__box.right.lazy img:last-child {
+  animation: loopRight2 70s linear infinite;
+}
+@keyframes loopRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes loopRight2 {
+  0% {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
