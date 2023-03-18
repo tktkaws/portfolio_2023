@@ -15,6 +15,7 @@ if (isPcSize) {
     const wrap = document.querySelector(".js-wrap");
     const items = document.querySelectorAll(".js-item");
     const num = items.length;
+    console.log(num);
 
     gsap.set(wrap, { width: num * 100 + "%" });
     gsap.set(items, { width: 100 / num + "%" });
@@ -28,7 +29,7 @@ if (isPcSize) {
         end: "bottom top",
         pin: true,
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     });
   });

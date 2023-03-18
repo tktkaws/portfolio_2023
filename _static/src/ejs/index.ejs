@@ -5,6 +5,50 @@
   <body class="home" id="body">
     <div id="top" class="wrap" ontouchstart="">
       <%- include('./common/_header', {pageId:pageId }) %>
+      <!-- mouse cursor -->
+      <div id="cursor" class="cursor"></div>
+      <div id="follower" class="follower"></div>
+      <div id="js-cursor-img" class="p-cursor-img"></div>
+      <div id="js-chaser-img" class="p-chaser-img">
+        <figure class="js-cursor-img01" id="js-cursor-img01">
+          <img
+            src="<%= path %>assets/images/home/cursor_works01.webp"
+            width="240"
+            height="130"
+            loading="lazy"
+            alt=""
+          />
+        </figure>
+        <figure class="js-cursor-img02" id="js-cursor-img02">
+          <img
+            src="<%= path %>assets/images/home/cursor_works02.webp"
+            width="240"
+            height="130"
+            loading="lazy"
+            alt=""
+          />
+        </figure>
+        <figure class="js-cursor-img03" id="js-cursor-img03">
+          <img
+            src="<%= path %>assets/images/home/cursor_works03.webp"
+            width="240"
+            height="130"
+            loading="lazy"
+            alt=""
+          />
+        </figure>
+        <figure class="js-cursor-img03" id="js-cursor-img04">
+          <img
+            src="<%= path %>assets/images/home/cursor_about.webp"
+            width="240"
+            height="130"
+            loading="lazy"
+            alt=""
+          />
+        </figure>
+      </div>
+
+      <!-- /mouse cursor -->
       <!-- main -->
       <main class="l-main">
         <div class="l-main__title">
@@ -14,114 +58,114 @@
           />
         </div>
         <div class="l-main__loop">
-          <div class="loop">
+          <div class="loop" id="js-target-01">
             <a href="/works/works01/index.html">
               <div class="loop__box right">
                 <img
-                  src="<%= path %>assets/images/home/company10.png"
-                  alt="架空建設会社サイト"
+                  srcset="<%= path %>assets/images/home/loop_company.webp"
+                  alt="架空建設会社サイトへのリンク"
                 />
                 <img
-                  src="<%= path %>assets/images/home/company10.png"
-                  alt="架空建設会社サイト"
+                  srcset="<%= path %>assets/images/home/loop_company.webp"
+                  alt="架空建設会社サイトページへのリンク"
                 />
               </div>
             </a>
           </div>
-          <div class="loop">
+          <div class="loop" id="js-target-02">
             <a href="/works/works02/index.html">
               <div class="loop__box fast">
                 <img
-                  src="<%= path %>assets/images/home/blog11.png"
-                  alt="技術ブログ"
+                  srcset="<%= path %>assets/images/home/loop_blog.webp"
+                  alt="技術ブログページへのリンク"
                 />
                 <img
-                  src="<%= path %>assets/images/home/blog11.png"
-                  alt="技術ブログ"
+                  srcset="<%= path %>assets/images/home/loop_blog.webp"
+                  alt="技術ブログページへのリンク"
                 />
               </div>
             </a>
           </div>
-          <div class="loop">
+          <div class="loop" id="js-target-03">
             <a href="/works/works03/index.html">
               <div class="loop__box right fast">
                 <img
-                  src="<%= path %>assets/images/home/portfolio11.png"
-                  alt="ポートフォリオ"
+                  srcset="<%= path %>assets/images/home/loop_portfolio.webp"
+                  alt="ポートフォリオページへのリンク"
                 />
                 <img
-                  src="<%= path %>assets/images/home/portfolio11.png"
-                  alt="ポートフォリオ"
+                  srcset="<%= path %>assets/images/home/loop_portfolio.webp"
+                  alt="ポートフォリオページへのリンク"
                 />
               </div>
             </a>
           </div>
-          <div class="loop">
+          <div class="loop" id="js-target-04">
             <a href="/about/index.html">
               <div class="loop__box">
                 <img
-                  src="<%= path %>assets/images/home/about11.png"
-                  alt="製作者について"
+                  srcset="<%= path %>assets/images/home/loop_about.webp"
+                  alt="aboutページへのリンク"
                 />
                 <img
-                  src="<%= path %>assets/images/home/about11.png"
-                  alt="製作者について"
+                  srcset="<%= path %>assets/images/home/loop_about.webp"
+                  alt="aboutページへのリンク"
                 />
               </div>
             </a>
           </div>
-          <div class="loop">
+          <div class="loop" id="js-target-05">
             <a href="/works/works01/index.html">
               <div class="loop__box right">
                 <img
-                  src="<%= path %>assets/images/home/company10.png"
-                  alt="架空建設会社サイト"
+                  srcset="<%= path %>assets/images/home/loop_company.webp"
+                  alt="架空建設会社サイトへのリンク"
                 />
                 <img
-                  src="<%= path %>assets/images/home/company10.png"
-                  alt="架空建設会社サイト"
+                  srcset="<%= path %>assets/images/home/loop_company.webp"
+                  alt="架空建設会社サイトページへのリンク"
                 />
               </div>
             </a>
           </div>
-          <div class="loop">
+          <div class="loop" id="js-target-06">
             <a href="/works/works02/index.html">
               <div class="loop__box fast">
                 <img
-                  src="<%= path %>assets/images/home/blog11.png"
-                  alt="技術ブログ"
+                  srcset="<%= path %>assets/images/home/loop_blog.webp"
+                  alt="技術ブログページへのリンク"
                 />
                 <img
-                  src="<%= path %>assets/images/home/blog11.png"
-                  alt="技術ブログ"
+                  srcset="<%= path %>assets/images/home/loop_blog.webp"
+                  alt="技術ブログページへのリンク"
                 />
               </div>
             </a>
           </div>
-          <div class="loop">
+          <div class="loop" id="js-target-07">
             <a href="/works/works03/index.html">
               <div class="loop__box right fast">
                 <img
-                  src="<%= path %>assets/images/home/portfolio11.png"
-                  alt="ポートフォリオ"
+                  srcset="<%= path %>assets/images/home/loop_portfolio.webp"
+                  alt="ポートフォリオページへのリンク"
                 />
                 <img
-                  src="<%= path %>assets/images/home/portfolio11.png"
-                  alt="ポートフォリオ"
+                  srcset="<%= path %>assets/images/home/loop_portfolio.webp"
+                  alt="ポートフォリオページへのリンク"
                 />
               </div>
             </a>
           </div>
-          <div class="loop">
+          <div class="loop" id="js-target-08">
             <a href="/about/index.html">
               <div class="loop__box">
                 <img
-                  src="<%= path %>assets/images/home/about11.png"
-                  alt="製作者について"
+                  srcset="<%= path %>assets/images/home/loop_about.webp"
+                  alt="aboutページへのリンク"
                 />
                 <img
-                  src="<%= path %>assets/images/home/about11.png"
-                  alt="製作者について"
+                  srcset="<%= path %>assets/images/home/loop_about.webp"
+                  alt="aboutページへのリンク"
                 />
               </div>
             </a>
@@ -130,7 +174,8 @@
       </main>
       <!-- /main -->
       <%- include('./common/_footer', {pageId:pageId }) %> <%-
-      include('./common/_script', {pageId:pageId }) %>
+      include('./common/_script', {pageId:pageId }) %> <%-
+      include('./common/script/_script-top.ejs', {pageId:pageId }) %>
     </div>
   </body>
 </html>
