@@ -2,11 +2,22 @@
 
 <!-- aside -->
 <aside class="l-aside"></aside>
+
+<% if (pageId === "home") { %>
+<aside class="l-aside__right --home"></aside>
+<% } else { %>
 <aside class="l-aside__right"></aside>
+<% }%>
 <!-- aside -->
 <!-- footer -->
 <fotter class="l-footer">
-  <div class="l-footer__inner">
+  <% if (pageId === "home") { %>
+    <div class="l-footer__inner --home">
+    <% } else { %>
+      <div class="l-footer__inner">
+    <% }%>
+
+
     <div class="l-footer__icons">
       <figure class="l-fotter__icon">
         <a

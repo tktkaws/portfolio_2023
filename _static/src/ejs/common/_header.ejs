@@ -1,7 +1,13 @@
 <% let path = jsonData.pages[pageId].path %>
 <!-- header -->
 <header class="l-header">
-  <div class="l-header__inner">
+  <% if (pageId === "home") { %>
+    <div class="l-header__inner --home">
+    <% } else { %>
+      <div class="l-header__inner">
+    <% }%>
+
+
     <figure class="l-header__logo">
       <a href="/">
         <img
@@ -11,42 +17,34 @@
       </a>
     </figure>
     <div class="l-header__text-area">
-      <!-- c-text-loop -->
-      <div class="c-text-loop">
-        <div class="c-text-loop__textWrap">
-          <div class="c-text-loop__text">
-            <ul class="l-header__list">
-              <li class="l-header__item">
-                <a href="/works/works01/index.html">
-                  <span>works01</span><span>架空建設会社</span></a
-                >
-              </li>
-              <li class="l-header__item">
-                <a href="/works/works02/index.html">
-                  <span>works02</span><span>技術ブログ</span></a
-                >
-              </li>
-              <li class="l-header__item">
-                <a href="/works/works03/index.html">
-                  <span>works03</span><span>ポートフォリオ</span></a
-                >
-              </li>
-              <li class="l-header__item">
-                <a href="/about/index.html">
-                  <span>about</span><span>タカハシタカユキ</span></a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- c-text-loop -->
+      <ul class="l-header__list">
+        <li class="l-header__item">
+          <a href="/works/works01/index.html">
+            <span>works01</span><span>架空建設会社</span></a
+          >
+        </li>
+        <li class="l-header__item">
+          <a href="/works/works02/index.html">
+            <span>works02</span><span>技術ブログ</span></a
+          >
+        </li>
+        <li class="l-header__item">
+          <a href="/works/works03/index.html">
+            <span>works03</span><span>ポートフォリオ</span></a
+          >
+        </li>
+        <li class="l-header__item">
+          <a href="/about/index.html">
+            <span>about</span><span>タカハシタカユキ</span></a
+          >
+        </li>
+      </ul>
     </div>
     <button class="l-header__contents" id="navbtn">all contents</button>
   </div>
   <nav class="l-nav">
     <div class="l-nav__title">
-      <div class="l-nav__heading">全てのコンテンツ</div>
+      <div class="l-nav__heading">All Contents</div>
     </div>
 
     <ul class="l-nav__list">
@@ -54,7 +52,7 @@
         <a href="/works/works01/index.html" class="l-nav__item-inner">
           <figure class="l-nav__image">
             <img
-              src="<%= path %>assets/images/top/screencapture01.png"
+              src="<%= path %><%= jsonData.pages.works01.image %>"
               alt="work.01"
             />
           </figure>
@@ -68,7 +66,7 @@
         <a href="/works/works02/index.html" class="l-nav__item-inner">
           <figure class="l-nav__image">
             <img
-              src="<%= path %>assets/images/top/screencapture01.png"
+              src="<%= path %><%= jsonData.pages.works02.image %>"
               alt="work.01"
             />
           </figure>
@@ -83,7 +81,7 @@
         <a href="/works/works03/index.html" class="l-nav__item-inner">
           <figure class="l-nav__image">
             <img
-              src="<%= path %>assets/images/top/screencapture01.png"
+              src="<%= path %><%= jsonData.pages.works03.image %>"
               alt="work.01"
             />
           </figure>
@@ -97,10 +95,23 @@
       <li class="l-nav__item">
         <a href="/about/index.html" class="l-nav__item-inner">
           <figure class="l-nav__image">
-            <img
-              src="<%= path %>assets/images/top/screencapture01.png"
+            <picture>
+              <source
+                srcset="<%= path %>assets/images/about/author0228_filter.webp"
+                type="image/webp"
+              />
+              <img
+                srcset="<%= path %>assets/images/about/author0228_filter.png"
+                alt="作者近影"
+                width="400"
+                height="500"
+              />
+            </picture>
+
+            <!-- <img
+              src="<%= path %><%= jsonData.pages.about.image %>"
               alt="work.01"
-            />
+            /> -->
           </figure>
           <div class="l-nav__body">
             <div class="l-nav__desc-heading">about</div>

@@ -4,6 +4,7 @@
   z-index: 3;
   position: fixed;
   background-color: $c-base;
+  width: 100%;
   padding: 2rem 3rem 0 2rem;
 
   &__inner {
@@ -12,6 +13,9 @@
     grid-template-columns: 4rem calc(100vw - 21rem) 12rem;
     grid-template-columns: 4rem 1fr 12rem;
     border: 1px solid;
+    &.--home {
+      width: calc(100vw - 4rem - 2px);
+    }
   }
 
   &__logo {
@@ -26,10 +30,8 @@
   &__text-area {
     grid-row: 1/1;
     grid-column: 2/2;
-
     overflow: hidden;
     height: 4rem;
-    // margin-left: -1px;
   }
   &__contents {
     grid-row: 1/1;
@@ -78,6 +80,11 @@
 .l-header__list {
   display: flex;
   letter-spacing: 0.2em;
+  justify-content: right;
+  padding-top: 20px;
+  @include mq(md) {
+    visibility: hidden;
+  }
 }
 
 .l-header__item {

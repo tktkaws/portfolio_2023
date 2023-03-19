@@ -9,22 +9,21 @@
   width: calc(2rem + 1px);
   height: calc(100vh - 12rem - 1px);
   border-right: 1px solid;
+}
 
-  &__right {
-    background-color: $c-base;
-    // background-color: $c-main;
-    z-index: 2;
-    position: fixed;
-    top: calc(6rem + 2px);
-    width: calc(2rem + 4px);
-    width: calc(3rem + 3px);
-    left: calc(100vw - 3rem - 3px);
-    // width: calc(100vw - 5rem - 2px);
-    // @include mq(md) {
-    //   width: calc(2rem + 4px);
-    // }
-    height: calc(100vh - 12rem - 1px);
-    border-left: 1px solid;
-    right: 0;
+.l-aside__right {
+  background-color: $c-base;
+  z-index: 2;
+  position: fixed;
+  top: calc(6rem + 2px);
+  width: calc(2rem + 4px);
+  width: calc(3rem + 3px);
+  left: calc(100vw - 3rem - 3px);
+  height: calc(100vh - 12rem - 1px);
+  border-left: 1px solid;
+  right: 0;
+
+  &.--home {
+    left: calc(100vw - 2rem - 3px);
   }
 }
