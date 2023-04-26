@@ -1,186 +1,87 @@
-<% let pageId = 'home'; %> <% let path = jsonData.pages[pageId].path %> <% let
-cording = jsonData.container.cording; %> <% let info = jsonData.info.works01; %>
-<% let info02 = jsonData.info.works02; %> <% let info03 = jsonData.info.works03;
-%>
+<% let pageId = 'home'; %>
+<% let path = jsonData.pages[pageId].path %>
+<% let cording = jsonData.container.cording; %>
+<% let info = jsonData.info.works01; %>
+<% let info02 = jsonData.info.works02; %>
+<% let info03 = jsonData.info.works03; %>
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('./common/_head', {pageId:pageId }) %>
   <body class="home" id="body">
     <div id="top" class="wrap" ontouchstart="">
       <%- include('./common/_header', {pageId:pageId }) %>
-
       <!-- main -->
       <main data-barba="wrapper">
-        <div
-          class="l-main container"
-          data-barba="container"
-          data-barba-namespace="home"
-        >
+        <div class="l-main container" data-barba="container" data-barba-namespace="home">
           <!-- 画面遷移 -->
           <div class="mask" id="mask"></div>
           <!-- 画面遷移 -->
-            <!-- mouse cursor -->
-        <div id="cursor" class="cursor"></div>
-        <div id="follower" class="follower"></div>
-        <div id="js-cursor-img" class="p-cursor-img"></div>
-        <div id="js-chaser-img" class="p-chaser-img">
-          <figure class="js-cursor-img01" id="js-cursor-img01">
-            <img
-              src="<%= path %>assets/images/home/cursor_works01.webp"
-              width="240"
-              height="130"
-              loading="lazy"
-              alt=""
-            />
-          </figure>
-          <figure class="js-cursor-img02" id="js-cursor-img02">
-            <img
-              src="<%= path %>assets/images/home/cursor_works02.webp"
-              width="240"
-              height="130"
-              loading="lazy"
-              alt=""
-            />
-          </figure>
-          <figure class="js-cursor-img03" id="js-cursor-img03">
-            <img
-              src="<%= path %>assets/images/home/cursor_works03.webp"
-              width="240"
-              height="130"
-              loading="lazy"
-              alt=""
-            />
-          </figure>
-          <figure class="js-cursor-img03" id="js-cursor-img04">
-            <img
-              src="<%= path %>assets/images/home/cursor_about.webp"
-              width="240"
-              height="130"
-              loading="lazy"
-              alt=""
-            />
-          </figure>
-        </div>
-
-        <!-- /mouse cursor -->
-
           <section class="p-home-mv">
             <h2 class="l-main__title">
-              <img
-                src="<%= path %>assets/images/common/title0225.svg"
-                alt="タカハシタカユキのポートフォリオ"
-              />
+              <img src="<%= path %>assets/images/common/title0225.svg" alt="タカハシタカユキのポートフォリオ" />
             </h2>
             <div class="l-main__loop">
-              <div class="loop" id="js-target-01">
+              <div class="loop">
                 <a href="/<%= jsonData.pages.works01.slug %>">
                   <div class="loop__box right">
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_company.webp"
-                      alt="架空建設会社サイトへのリンク"
-                    />
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_company.webp"
-                      alt="架空建設会社サイトページへのリンク"
-                    />
+                    <img srcset="<%= path %>assets/images/home/loop_company.webp" alt="架空建設会社サイトへのリンク" />
+                    <img srcset="<%= path %>assets/images/home/loop_company.webp" alt="架空建設会社サイトページへのリンク" />
                   </div>
                 </a>
               </div>
               <div class="loop">
                 <a href="/<%= jsonData.pages.works02.slug %>">
                   <div class="loop__box fast">
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_blog.webp"
-                      alt="技術ブログページへのリンク"
-                    />
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_blog.webp"
-                      alt="技術ブログページへのリンク"
-                    />
+                    <img srcset="<%= path %>assets/images/home/loop_blog.webp" alt="技術ブログページへのリンク" />
+                    <img srcset="<%= path %>assets/images/home/loop_blog.webp" alt="技術ブログページへのリンク" />
                   </div>
                 </a>
               </div>
               <div class="loop">
                 <a href="/<%= jsonData.pages.works03.slug %>">
                   <div class="loop__box right fast">
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_portfolio.webp"
-                      alt="ポートフォリオページへのリンク"
-                    />
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_portfolio.webp"
-                      alt="ポートフォリオページへのリンク"
-                    />
+                    <img srcset="<%= path %>assets/images/home/loop_portfolio.webp" alt="ポートフォリオページへのリンク" />
+                    <img srcset="<%= path %>assets/images/home/loop_portfolio.webp" alt="ポートフォリオページへのリンク" />
                   </div>
                 </a>
               </div>
               <div class="loop">
                 <a href="/<%= jsonData.pages.about.slug %>">
                   <div class="loop__box">
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_about.webp"
-                      alt="aboutページへのリンク"
-                    />
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_about.webp"
-                      alt="aboutページへのリンク"
-                    />
+                    <img srcset="<%= path %>assets/images/home/loop_about.webp" alt="aboutページへのリンク" />
+                    <img srcset="<%= path %>assets/images/home/loop_about.webp" alt="aboutページへのリンク" />
                   </div>
                 </a>
               </div>
               <div class="loop">
                 <a href="/<%= jsonData.pages.works01.slug %>">
                   <div class="loop__box right">
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_company.webp"
-                      alt="架空建設会社サイトへのリンク"
-                    />
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_company.webp"
-                      alt="架空建設会社サイトページへのリンク"
-                    />
+                    <img srcset="<%= path %>assets/images/home/loop_company.webp" alt="架空建設会社サイトへのリンク" />
+                    <img srcset="<%= path %>assets/images/home/loop_company.webp" alt="架空建設会社サイトページへのリンク" />
                   </div>
                 </a>
               </div>
               <div class="loop">
                 <a href="/<%= jsonData.pages.works02.slug %>">
                   <div class="loop__box fast">
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_blog.webp"
-                      alt="技術ブログページへのリンク"
-                    />
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_blog.webp"
-                      alt="技術ブログページへのリンク"
-                    />
+                    <img srcset="<%= path %>assets/images/home/loop_blog.webp" alt="技術ブログページへのリンク" />
+                    <img srcset="<%= path %>assets/images/home/loop_blog.webp" alt="技術ブログページへのリンク" />
                   </div>
                 </a>
               </div>
               <div class="loop">
                 <a href="/<%= jsonData.pages.works03.slug %>">
                   <div class="loop__box right fast">
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_portfolio.webp"
-                      alt="ポートフォリオページへのリンク"
-                    />
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_portfolio.webp"
-                      alt="ポートフォリオページへのリンク"
-                    />
+                    <img srcset="<%= path %>assets/images/home/loop_portfolio.webp" alt="ポートフォリオページへのリンク" />
+                    <img srcset="<%= path %>assets/images/home/loop_portfolio.webp" alt="ポートフォリオページへのリンク" />
                   </div>
                 </a>
               </div>
               <div class="loop">
                 <a href="/<%= jsonData.pages.about.slug %>">
                   <div class="loop__box">
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_about.webp"
-                      alt="aboutページへのリンク"
-                    />
-                    <img
-                      srcset="<%= path %>assets/images/home/loop_about.webp"
-                      alt="aboutページへのリンク"
-                    />
+                    <img srcset="<%= path %>assets/images/home/loop_about.webp" alt="aboutページへのリンク" />
+                    <img srcset="<%= path %>assets/images/home/loop_about.webp" alt="aboutページへのリンク" />
                   </div>
                 </a>
               </div>
@@ -191,53 +92,55 @@ cording = jsonData.container.cording; %> <% let info = jsonData.info.works01; %>
               <div class="c-title">
                 <a href="/<%= jsonData.pages.works01.slug %>">
                   <h2>
-                    <div class="c-title__heading"><%= info.basic.title %></div>
+                    <div class="c-title__heading">
+                      <%= info.basic.title %>
+                    </div>
                   </h2>
                 </a>
-
               </div>
               <dl class="c-desc">
-
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info.term.position %></dt>
-                  <dd class="c-desc__desc"><%= info.desc.position %></dd>
+                  <dt class="c-desc__term">
+                    <%= info.term.position %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info.desc.position %>
+                  </dd>
                 </div>
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info.term.date %></dt>
-                  <dd class="c-desc__desc"><%= info.desc.date %></dd>
+                  <dt class="c-desc__term">
+                    <%= info.term.date %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info.desc.date %>
+                  </dd>
                 </div>
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info.term.tech %></dt>
-                  <dd class="c-desc__desc"><%= info.desc.tech %></dd>
+                  <dt class="c-desc__term">
+                    <%= info.term.tech %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info.desc.tech %>
+                  </dd>
                 </div>
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info.term.work %></dt>
-                  <dd class="c-desc__desc"><%= info.desc.work %></dd>
+                  <dt class="c-desc__term">
+                    <%= info.term.work %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info.desc.work %>
+                  </dd>
                 </div>
                 <div class="p-home-highlights__link">
                   <a href="/<%= jsonData.pages.works01.slug %>">
-                    <span>詳細を見る</span></a
-                  >
+                    <span>詳細を見る</span>
+                  </a>
                 </div>
               </dl>
             </div>
             <p class="p-home-highlights__mv">
               <a href="/<%= jsonData.pages.works01.slug %>">
-                <video
-                id="video01"
-                webkit-playsinline
-                playsinline
-                muted
-                autoplay
-                loop
-                width="2000"
-                height="900"
-              >
-                <source
-                  src="<%= path %>assets/images/video/fuji01.mp4"
-                  type="video/mp4"
-                />
-              </video>
+                <img src="<%= path %>assets/images/top/works01_01.webp" width="240" height="130" loading="lazy" alt="" />
               </a>
             </p>
           </section>
@@ -246,142 +149,135 @@ cording = jsonData.container.cording; %> <% let info = jsonData.info.works01; %>
               <div class="c-title">
                 <a href="/<%= jsonData.pages.works02.slug %>">
                   <h2>
-                    <div class="c-title__heading"><%= info02.basic.title %></div>
+                    <div class="c-title__heading">
+                      <%= info02.basic.title %>
+                    </div>
                   </h2>
                 </a>
-
               </div>
               <dl class="c-desc">
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info02.term.position %></dt>
-                  <dd class="c-desc__desc"><%= info02.desc.position %></dd>
+                  <dt class="c-desc__term">
+                    <%= info02.term.position %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info02.desc.position %>
+                  </dd>
                 </div>
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info02.term.date %></dt>
-                  <dd class="c-desc__desc"><%= info02.desc.date %></dd>
+                  <dt class="c-desc__term">
+                    <%= info02.term.date %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info02.desc.date %>
+                  </dd>
                 </div>
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info02.term.tech %></dt>
-                  <dd class="c-desc__desc"><%= info02.desc.tech %></dd>
+                  <dt class="c-desc__term">
+                    <%= info02.term.tech %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info02.desc.tech %>
+                  </dd>
                 </div>
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info02.term.work %></dt>
-                  <dd class="c-desc__desc"><%= info02.desc.work %></dd>
+                  <dt class="c-desc__term">
+                    <%= info02.term.work %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info02.desc.work %>
+                  </dd>
                 </div>
                 <div class="p-home-highlights__link">
                   <a href="/<%= jsonData.pages.works02.slug %>">
-                    <span>詳細を見る</span></a
-                  >
+                    <span>詳細を見る</span></a>
                 </div>
               </dl>
 
             </div>
             <p class="p-home-highlights__mv">
               <a href="/<%= jsonData.pages.works02.slug %>">
-                <video
-                id="video02"
-                webkit-playsinline
-                playsinline
-                muted
-                autoplay
-                loop
-                width="2000"
-                height="900"
-              >
-                <source
-                  src="<%= path %>assets/images/video/works02_03.mp4"
-                  type="video/mp4"
-                />
-              </video>
+                <img src="<%= path %>assets/images/top/works02_01.webp" width="240" height="130" loading="lazy" alt="" />
               </a>
             </p>
-
-
           </section>
           <section class="p-home-highlights">
             <div class="p-home-highlights__info">
               <div class="c-title">
                 <a href="/<%= jsonData.pages.works03.slug %>">
                   <h2>
-                    <div class="c-title__heading"><%= info03.basic.title %></div>
+                    <div class="c-title__heading">
+                      <%= info03.basic.title %>
+                    </div>
                   </h2>
                 </a>
               </div>
               <dl class="c-desc">
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info03.term.position %></dt>
-                  <dd class="c-desc__desc"><%= info03.desc.position %></dd>
+                  <dt class="c-desc__term">
+                    <%= info03.term.position %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info03.desc.position %>
+                  </dd>
                 </div>
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info03.term.date %></dt>
-                  <dd class="c-desc__desc"><%= info03.desc.date %></dd>
+                  <dt class="c-desc__term">
+                    <%= info03.term.date %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info03.desc.date %>
+                  </dd>
                 </div>
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info03.term.tech %></dt>
-                  <dd class="c-desc__desc"><%= info03.desc.tech %></dd>
+                  <dt class="c-desc__term">
+                    <%= info03.term.tech %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info03.desc.tech %>
+                  </dd>
                 </div>
                 <div class="c-desc__list">
-                  <dt class="c-desc__term"><%= info03.term.work %></dt>
-                  <dd class="c-desc__desc"><%= info03.desc.work %></dd>
+                  <dt class="c-desc__term">
+                    <%= info03.term.work %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info03.desc.work %>
+                  </dd>
                 </div>
                 <div class="p-home-highlights__link">
                   <a href="/<%= jsonData.pages.works03.slug %>">
-                    <span>詳細を見る</span></a
-                  >
+                    <span>詳細を見る</span></a>
                 </div>
               </dl>
             </div>
             <p class="p-home-highlights__mv">
               <a href="/<%= jsonData.pages.works03.slug %>">
-                <video
-                id="video03"
-                webkit-playsinline
-                playsinline
-                muted
-                autoplay
-                loop
-                width="2000"
-                height="900"
-              >
-                <source
-                  src="<%= path %>assets/images/video/works03_05.webm"
-                  type="video/webm"
-                />
-              </video>
-
+                <img src="<%= path %>assets/images/top/works03_02.webp" width="240" height="130" loading="lazy" alt="" />
               </a>
-
             </p>
           </section>
-          <section class="p-home-highlights">
+          <section class="p-home-highlights --about">
             <div class="p-home-highlights__info">
-                <div class="c-title">
-                  <a href="/<%= jsonData.pages.about.slug %>">
-                    <h2>
-                      <div class="c-title__heading">ABOUT</div>
-                    </h2>
-                  </a>
-                  <div class="c-title__desc-wrapper">
-                    <p class="c-title__desc">髙橋孝幸</p>
-                    <p class="c-title__desc">神奈川県平塚市在住</p>
-                    <p class="c-title__desc">1986年生まれ</p>
-                    <p class="c-title__desc">早稲田大学政治経済学部経済学科卒業</p>
-                  </div>
-                  <div class="c-title__desc-wrapper">
-                    <p class="c-title__desc">業務でマクロに触れ独学で習得</p>
-                    <p class="c-title__desc">
-                      バックエンドエンジニアを目指したが不眠症に陥る
-                    </p>
-                    <p class="c-title__desc">現在はWeb制作の道を目指している</p>
-                  </div>
-                  <div class="c-title__desc-wrapper">
-                    <div class="p-home-highlights__link">
-                      <a href="/<%= jsonData.pages.about.slug %>">
-                        <span>詳細を見る</span></a
-                      >
-                    </div>
+              <div class="c-title">
+                <a href="/<%= jsonData.pages.about.slug %>">
+                  <h2>
+                    <div class="c-title__heading">ABOUT</div>
+                  </h2>
+                </a>
+                <div class="c-title__desc-wrapper">
+                  <p class="c-title__desc">髙橋孝幸</p>
+                  <p class="c-title__desc">神奈川県平塚市在住</p>
+                  <p class="c-title__desc">1986年生まれ</p>
+                  <p class="c-title__desc">早稲田大学政治経済学部経済学科卒業</p>
+                </div>
+                <div class="c-title__desc-wrapper">
+                  <div class="p-home-highlights__link">
+                    <a href="/<%= jsonData.pages.about.slug %>">
+                      <span>詳細を見る</span></a>
                   </div>
                 </div>
+              </div>
             </div>
             <div class="p-about-skills">
               <div class="p-about-skills__title">
@@ -391,12 +287,9 @@ cording = jsonData.container.cording; %> <% let info = jsonData.info.works01; %>
               </div>
               <div class="p-about-skills__block-wrapper">
                 <div class="p-about-skills__block">
-                  <div class="p-about-skills__block-title">
-                    <h4 class="p-about-skills__block-heading">
-                      環境
-                    </h4>
-                    <div class="p-about-skills__block-subHeading"> environment</div>
-                  </div>
+                  <h4 class="p-about-skills__heading">環境
+                    <span class="p-about-skills__sub-heading">environment</span>
+                  </h4>
                   <dl class="p-about-skills__list">
                     <div class="p-about-skills__wrapper">
                       <dt class="p-about-skills__term">gulp</dt>
@@ -405,12 +298,10 @@ cording = jsonData.container.cording; %> <% let info = jsonData.info.works01; %>
                     <div class="p-about-skills__wrapper">
                       <dt class="p-about-skills__term">webpack</dt>
                       <dd class="p-about-skills__desc">クラス化モジュール化をして保守性拡張性を担保</dd>
-                      <dd class="p-about-skills__desc">viteに移行予定</dd>
                     </div>
                     <div class="p-about-skills__wrapper">
                       <dt class="p-about-skills__term">EJS</dt>
-                      <dd class="p-about-skills__desc">jsonから値を取得することでCMSへの移行もスムーズに行える</dd>
-                      <dd class="p-about-skills__desc">Astroに移行予定</dd>
+                      <dd class="p-about-skills__desc">jsonから値を取得することでCMSへの移行もスムーズに行える。Astroに移行予定</dd>
                     </div>
                     <div class="p-about-skills__wrapper">
                       <dt class="p-about-skills__term">Git</dt>
@@ -420,23 +311,21 @@ cording = jsonData.container.cording; %> <% let info = jsonData.info.works01; %>
                 </div>
                 <div class="p-about-skills__block">
                   <div class="p-about-skills__block-title">
-                    <h4 class="p-about-skills__block-heading">
-                    開発
+                    <h4 class="p-about-skills__heading">開発
+                      <span class="p-about-skills__sub-heading">development</span>
                     </h4>
-                    <div class="p-about-skills__block-subHeading">development</div>
                   </div>
                   <dl class="p-about-skills__list">
                     <div class="p-about-skills__wrapper">
                       <dt class="p-about-skills__term">HTML</dt>
                       <dd class="p-about-skills__desc">セマンティックなマークアップが基礎的なレベルで可能</dd>
-                      <dd class="p-about-skills__desc">SEOやアクセシビリティへの配慮したマークアップを学習中</dd>
                     </div>
                     <div class="p-about-skills__wrapper">
                       <dt class="p-about-skills__term">CSS</dt>
                       <dd class="p-about-skills__desc">FLOCSSを使用し保守性拡張性を担保</dd>
                     </div>
                     <div class="p-about-skills__wrapper">
-                      <dt class="p-about-skills__term">Java Script</dt>
+                      <dt class="p-about-skills__term">JavaScript</dt>
                       <dd class="p-about-skills__desc">GSAP・barba.js・Splide等各種ライブラリを問題なく使用可能</dd>
                     </div>
                     <div class="p-about-skills__wrapper">
@@ -446,17 +335,16 @@ cording = jsonData.container.cording; %> <% let info = jsonData.info.works01; %>
                   </dl>
                   <div class="p-about-skills__desc">
                   </div>
-                  </div>
                 </div>
+              </div>
             </div>
           </section>
-
         </div>
       </main>
       <!-- /main -->
-      <%- include('./common/_footer', {pageId:pageId }) %> <%-
-      include('./common/_script', {pageId:pageId }) %> <%-
-      include('./common/script/_script-top.ejs', {pageId:pageId }) %>
+      <%- include('./common/_footer', {pageId:pageId }) %>
+      <%- include('./common/_script', {pageId:pageId }) %>
+      <%- include('./common/script/_script-top.ejs', {pageId:pageId }) %>
     </div>
   </body>
 </html>
