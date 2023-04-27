@@ -7,14 +7,10 @@ import {
   enterAnimationReveal,
 } from "./modules/transitions";
 import { navClear } from "./modules/navClear";
-import { mouseStalker } from "./modules/mouseStalker";
 import replaceHeadTags from "./modules/replaceHeadTags";
 import { runLoadingAnimation } from "./modules/loadingAnimation";
-import { hoverAddClass } from "./modules/hoverAddClass";
 
 clickToggleClass();
-// mouseStalker();
-// hoverAddClass();
 
 barba.init({
   sync: true,
@@ -52,8 +48,6 @@ barba.init({
 });
 
 barba.hooks.after(() => {
-  // hoverAddClass();
-  // mouseStalker();
   // Googleアナリティクスに情報を送る
   ga("set", "page", window.location.pathname);
   ga("send", "pageview");
