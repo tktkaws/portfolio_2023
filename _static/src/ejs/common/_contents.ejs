@@ -1,0 +1,59 @@
+<% let path=jsonData.pages[pageId].path %>
+
+  <div class="l-contents" id="contents">
+    <div class="l-contents__title">
+      <h3 class="p-about-skills__heading">other contents
+        <!-- <span class="p-about-skills__sub-heading">other contents</span> -->
+      </h3>
+    </div>
+    <ul class="l-contents__list" id="l-contents__list">
+      <% if (pageId !="works01" ) { %>
+        <li class="l-contents__item" id="js-target-01">
+          <a href="/<%= jsonData.pages.works01.slug %>">
+            <div class="l-contents__desc-heading">
+              works01
+            </div>
+            <div class="l-contents__desc-heading">
+              架空建設会社サイト
+            </div>
+          </a>
+        </li>
+        <% } %>
+          <% if (pageId !="works02" ) { %>
+            <li class="l-contents__item" id="js-target-02">
+              <a href="/<%= jsonData.pages.works02.slug %>">
+                <div class="l-contents__desc-heading">
+                  works02
+                </div>
+                <div class="l-contents__desc-heading">
+                  技術ブログ
+                </div>
+              </a>
+            </li>
+            <% } %>
+              <% if (pageId !="works03" ) { %>
+                <li class="l-contents__item" id="js-target-03">
+                  <a href="/<%= jsonData.pages.works03.slug %>">
+                    <div class="l-contents__desc-heading">
+                      works03
+                    </div>
+                    <div class="l-contents__desc-heading">
+                      ポートフォリオ
+                    </div>
+                  </a>
+                </li>
+                <% } %>
+                  <% if (pageId !="about" ) { %>
+                    <li class="l-contents__item" id="js-target-04">
+                      <a href="/<%= jsonData.pages.about.slug %>">
+                        <div class="l-contents__desc-heading">
+                          about
+                        </div>
+                        <div class="l-contents__desc-heading">
+                          タカハシタカユキ
+                        </div>
+                      </a>
+                    </li>
+                    <% } %>
+    </ul>
+  </div>

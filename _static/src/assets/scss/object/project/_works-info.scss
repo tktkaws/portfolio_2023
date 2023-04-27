@@ -1,0 +1,39 @@
+@use "./../../foundation/global" as *;
+
+.p-works-info {
+  grid-row: 1/1;
+  grid-column: 2/2;
+  @include mq(md) {
+    grid-row: 1/1;
+    grid-column: 1/1;
+  }
+
+  position: sticky;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  right: 2rem;
+  top: 6rem;
+  width: 100%;
+  height: calc(100vh - 12rem);
+  height: calc(100vh - 28rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  &__split-line {
+    width: 96%;
+    margin: 0 auto;
+    height: 1px;
+    background: $c-main;
+    opacity: 0.2;
+  }
+}
