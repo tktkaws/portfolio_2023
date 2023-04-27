@@ -1,0 +1,97 @@
+<% let pageId='works02' ; %>
+<% let path=jsonData.pages[pageId].path %>
+<% let cording=jsonData.container.cording; %>
+<% let info=jsonData.info.works02; %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../common/_head', {pageId:pageId }) %>
+  <body class="home" id="body">
+    <%- include('../common/_header', {pageId:pageId }) %>
+    <!-- main -->
+    <main data-barba="wrapper">
+      <div
+        class="l-main container"
+        data-barba="container"
+        data-barba-namespace="works"
+      >
+        <!-- 画面遷移 -->
+        <div class="mask" id="mask"></div>
+        <!-- 画面遷移 -->
+        <article>
+          <div class="l-info">
+            <div class="c-title">
+              <h2>
+                <div class="c-title__heading"><%= info.basic.title %></div>
+              </h2>
+              <div class="c-title__desc-wrapper">
+                <p class="c-title__desc">
+                  <a href="<%= info.basic.link %>" target="”_blank”">
+                    <%= info.basic.link %>
+                  </a>
+                </p>
+                <p class="c-title__desc"><%= info.basic.pass %></p>
+                <p class="c-title__desc"><%= info.basic.user %></p>
+              </div>
+            </div>
+            <dl class="c-desc">
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.github %></dt>
+                <dd class="c-desc__desc">
+                  <a href="<%= info.desc.github %>" target="”_blank”">
+                    <%= info.desc.github %>
+                  </a>
+                </dd>
+              </div>
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.position %></dt>
+                <dd class="c-desc__desc"><%= info.desc.position %></dd>
+              </div>
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.date %></dt>
+                <dd class="c-desc__desc"><%= info.desc.date %></dd>
+              </div>
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.tech %></dt>
+                <dd class="c-desc__desc"><%= info.desc.tech %></dd>
+              </div>
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.work %></dt>
+                <dd class="c-desc__desc"><%= info.desc.work %></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="l-main-content">
+            <div class="l-main-content__block">
+              <p class="p-works__mv">
+                <video
+                id="video02"
+                webkit-playsinline
+                playsinline
+                muted
+                autoplay
+                loop
+                width="2000"
+                height="900"
+              >
+                <source
+                  src="<%= path %>assets/images/video/works02_03.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              </p>
+            </div>
+            <!-- l-contents -->
+            <%- include('../common/_contents', {pageId:pageId }) %>
+            <!-- l-contents -->
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- /main -->
+    <%- include('../common/_footer', {pageId:pageId }) %> <%-
+    include('../common/_script', {pageId:pageId }) %> <%-
+    include('../common/script/_script-works.ejs', {pageId:pageId }) %>
+  </body>
+</html>

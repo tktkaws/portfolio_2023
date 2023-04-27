@@ -1,0 +1,160 @@
+<% let pageId='works01' ; %>
+<% let path=jsonData.pages[pageId].path %>
+<% let cording=jsonData.container.cording; %>
+<% let info=jsonData.info.works01; %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../common/_head', {pageId:pageId }) %>
+  <body class="works" id="body">
+    <%- include('../common/_header', {pageId:pageId }) %>
+    <!-- main -->
+    <main data-barba="wrapper">
+      <div
+        class="l-main container"
+        data-barba="container"
+        data-barba-namespace="works"
+      >
+        <!-- 画面遷移 -->
+        <div class="mask" id="mask"></div>
+        <!-- 画面遷移 -->
+        <article>
+          <div class="l-info">
+            <div class="c-title">
+              <h2 class="c-title__heading">
+                <%= info.basic.title %>
+              </h2>
+              <div class="c-title__desc-wrapper">
+                <p class="c-title__desc">
+                  <a href="<%= info.basic.link %>" target="”_blank”">
+                    <%= info.basic.link %>
+                  </a>
+                </p>
+                <p class="c-title__desc"><%= info.basic.pass %></p>
+                <p class="c-title__desc"><%= info.basic.user %></p>
+              </div>
+            </div>
+            <dl class="c-desc">
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.github %></dt>
+                <dd class="c-desc__desc">
+                  <a href="<%= info.desc.github %>" target="”_blank”">
+                    <%= info.desc.github %>
+                  </a>
+                </dd>
+              </div>
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.position %></dt>
+                <dd class="c-desc__desc"><%= info.desc.position %></dd>
+              </div>
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.date %></dt>
+                <dd class="c-desc__desc"><%= info.desc.date %></dd>
+              </div>
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.tech %></dt>
+                <dd class="c-desc__desc"><%= info.desc.tech %></dd>
+              </div>
+              <div class="c-desc__list">
+                <dt class="c-desc__term"><%= info.term.work %></dt>
+                <dd class="c-desc__desc"><%= info.desc.work %></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="l-main-content">
+            <div class="l-main-content__block">
+              <p class="p-works__mv">
+                <video
+                  id="video01"
+                  webkit-playsinline
+                  playsinline
+                  muted
+                  autoplay
+                  loop
+                  width="2000"
+                  height="900"
+                >
+                  <source
+                  src="<%= path %>assets/images/video/works01_02.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </p>
+            </div>
+
+            <ul class="p-works__list">
+              <li class="p-works__item">
+                <picture>
+                  <source
+                    srcset="<%= path %>assets/images/works/works01_sub01.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    srcset="<%= path %>assets/images/works/works01_sub01.png"
+                    alt="下層ページのフルスクリーンショット"
+                    width="300"
+                    height="900"
+                    loading="lazy"
+                  />
+                </picture>
+              </li>
+              <li class="p-works__item">
+                <picture>
+                  <source
+                    srcset="<%= path %>assets/images/works/works01_sub02.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    srcset="<%= path %>assets/images/works/works01_sub02.png"
+                    alt="下層ページのフルスクリーンショット"
+                    width="300"
+                    height="900"
+                    loading="lazy"
+                  />
+                </picture>
+              </li>
+              <li class="p-works__item">
+                <picture>
+                  <source
+                    srcset="<%= path %>assets/images/works/works01_sub03.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    srcset="<%= path %>assets/images/works/works01_sub03.png"
+                    alt="下層ページのフルスクリーンショット"
+                    width="300"
+                    height="900"
+                    loading="lazy"
+                  />
+                </picture>
+              </li>
+              <li class="p-works__item">
+                <picture>
+                  <source
+                    srcset="<%= path %>assets/images/works/works01_sub04.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    srcset="<%= path %>assets/images/works/works01_sub04.png"
+                    alt="下層ページのフルスクリーンショット"
+                    width="300"
+                    height="900"
+                    loading="lazy"
+                  />
+                </picture>
+              </li>
+            </ul>
+            <!-- l-contents -->
+            <%- include('../common/_contents', {pageId:pageId }) %>
+            <!-- l-contents -->
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- /main -->
+    <%- include('../common/_footer', {pageId:pageId }) %> <%-
+    include('../common/_script', {pageId:pageId }) %> <%-
+    include('../common/script/_script-works.ejs', {pageId:pageId }) %>
+  </body>
+</html>
