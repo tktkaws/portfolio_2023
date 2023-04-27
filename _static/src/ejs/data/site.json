@@ -12,32 +12,36 @@
       "path": "./"
     },
     "about": {
-      "name": "about",
+      "name": "About",
       "description": "about",
-      "type": "article",
+      "type": "about",
       "slug": "about/index.html",
+      "image": "assets/images/profile/author002.png",
       "path": "../"
     },
     "works01": {
       "name": "Works01",
       "description": "works01",
       "type": "article",
-      "slug": "works/works01/index.html",
-      "path": "../../"
+      "slug": "works/works01.html",
+      "image": "assets/images/works/construction01.png",
+      "path": "../"
     },
     "works02": {
       "name": "Works02",
       "description": "works02",
       "type": "article",
-      "slug": "works/works02/index.html",
-      "path": "../../"
+      "slug": "works/works02.html",
+      "image": "assets/images/works/front_dispatch.png",
+      "path": "../"
     },
     "works03": {
       "name": "Works03",
       "description": "works03",
       "type": "article",
-      "slug": "works/works03/index.html",
-      "path": "../../"
+      "slug": "works/works03.html",
+      "image": "assets/images/works/portfolio01.png",
+      "path": "../"
     }
   },
   "container": {
@@ -58,6 +62,68 @@
   },
   "info": {
     "works01": {
+      "basic": {
+        "title": "架空建設会社サイト",
+        "link": "https://f-u-j-i.ink/",
+        "pass": "pass:pass",
+        "user": "user:user"
+      },
+      "term": {
+        "position": "担当範囲",
+        "date": "製作期間",
+        "tech": "使用技術",
+        "work": "実装内容",
+        "github": "Github"
+      },
+      "desc": {
+        "position": "コーディング , CMS構築",
+        "date": "2022.11.01 - 2022.12.30",
+        "tech": "EJS , SCSS , JavaScript , git , webpack , vscode , XD",
+        "work": "デザインカンプから13Pをコーディングし、WordPressを構築",
+        "github": "https://github.com/tktkaws/Fuji_WordPress"
+      }
+    },
+    "works02": {
+      "basic": {
+        "title": "技術ブログ",
+        "link": "https://www.front-dispatch.website/"
+      },
+      "term": {
+        "position": "担当範囲",
+        "date": "製作期間",
+        "tech": "使用技術",
+        "work": "実装内容",
+        "github": "Github"
+      },
+      "desc": {
+        "position": "企画 , デザイン , コーディング , CMS構築",
+        "date": "2023.03.01 - 2023.03.12",
+        "tech": "Next.js , microCMS , Git , Figma",
+        "work": "Jamstack構成のマイクロブログ",
+        "github": "https://github.com/tktkaws/front_dispatch"
+      }
+    },
+    "works03": {
+      "basic": {
+        "title": "ポートフォリオ",
+        "link": "https://github.com/tktkaws/portfolio_2023"
+      },
+      "term": {
+        "position": "担当範囲",
+        "date": "製作期間",
+        "tech": "使用技術",
+        "work": "実装内容",
+        "github": "Github"
+      },
+      "desc": {
+        "position": "企画 , デザイン , コーディング",
+        "date": "2023.02.01 - 2023.02.28",
+        "tech": "EJS , SCSS , JavaScript , Git , webpack , vscode , Figma",
+        "work": "barba.js,GSAPを使用し非同期遷移と遷移アニメを実装",
+        "github": "https://github.com/tktkaws/portfolio_2023"
+      }
+    },
+    "about": {
       "term": {
         "position": "担当範囲",
         "date": "製作期間",
