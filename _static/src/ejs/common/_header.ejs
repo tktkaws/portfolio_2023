@@ -4,57 +4,69 @@
   <div class="l-header__inner">
     <figure class="l-header__logo">
       <a href="/">
-        <img
+        <%- include('./_logo', {pageId:pageId }) %>
+        <!-- <img
           src="<%= path %>assets/images/common/logo0225.svg"
           alt="サイトロゴ"
-        />
+        /> -->
       </a>
     </figure>
     <div class="l-header__text-area">
-      <!-- c-text-loop -->
-      <div class="c-text-loop">
-        <div class="c-text-loop__textWrap">
-          <div class="c-text-loop__text">
-            <ul class="l-header__list">
-              <li class="l-header__item">
-                <a href="/works/works01/index.html">
-                  <span>works01</span><span>架空建設会社</span></a
-                >
-              </li>
-              <li class="l-header__item">
-                <a href="/works/works02/index.html">
-                  <span>works02</span><span>技術ブログ</span></a
-                >
-              </li>
-              <li class="l-header__item">
-                <a href="/works/works03/index.html">
-                  <span>works03</span><span>ポートフォリオ</span></a
-                >
-              </li>
-              <li class="l-header__item">
-                <a href="/about/index.html">
-                  <span>about</span><span>タカハシタカユキ</span></a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- c-text-loop -->
+      <ul class="l-header__list">
+        <li class="l-header__item">
+          <a href="/<%= jsonData.pages.works01.slug %>">
+            <span>works01</span><span>架空建設会社</span></a
+          >
+        </li>
+        <li class="l-header__item">
+          <a href="/<%= jsonData.pages.works02.slug %>">
+            <span>works02</span><span>技術ブログ</span></a
+          >
+        </li>
+        <li class="l-header__item">
+          <a href="/<%= jsonData.pages.works03.slug %>">
+            <span>works03</span><span>ポートフォリオ</span></a
+          >
+        </li>
+        <li class="l-header__item">
+          <a href="/<%= jsonData.pages.about.slug %>">
+            <span>about</span><span>タカハシタカユキ</span></a
+          >
+        </li>
+      </ul>
     </div>
-    <button class="l-header__contents" id="navbtn">all contents</button>
+    <button class="l-header__contents">
+      <a href="https://www.front-dispatch.website/" target="”_blank”">
+        <span>blog</span>
+        <svg
+          width="11"
+          height="11"
+          viewBox="0 0 11 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10.0006 11C10.2658 11 10.5202 10.8946 10.7077 10.7071C10.8953 10.5196 11.0006 10.2652 11.0006 10V1C11.0006 0.734784 10.8953 0.48043 10.7077 0.292893C10.5202 0.105357 10.2658 0 10.0006 0H1.00063C0.735415 0 0.481061 0.105357 0.293525 0.292893C0.105988 0.48043 0.000631571 0.734784 0.000631571 1V4.5C0.000631571 4.63261 0.0533101 4.75979 0.147078 4.85355C0.240846 4.94732 0.368023 5 0.500632 5C0.63324 5 0.760417 4.94732 0.854185 4.85355C0.947953 4.75979 1.00063 4.63261 1.00063 4.5V1H10.0006V10H6.50063C6.36802 10 6.24085 10.0527 6.14708 10.1464C6.05331 10.2402 6.00063 10.3674 6.00063 10.5C6.00063 10.6326 6.05331 10.7598 6.14708 10.8536C6.24085 10.9473 6.36802 11 6.50063 11H10.0006ZM7.00063 4.5V7.5C7.00063 7.63261 6.94795 7.75979 6.85419 7.85355C6.76042 7.94732 6.63324 8 6.50063 8C6.36802 8 6.24085 7.94732 6.14708 7.85355C6.05331 7.75979 6.00063 7.63261 6.00063 7.5V5.707L0.854632 10.854C0.808144 10.9005 0.752954 10.9374 0.692215 10.9625C0.631476 10.9877 0.566375 11.0006 0.500632 11.0006C0.434888 11.0006 0.369788 10.9877 0.309048 10.9625C0.248309 10.9374 0.193119 10.9005 0.146631 10.854C0.100144 10.8075 0.0632674 10.7523 0.0381083 10.6916C0.0129493 10.6308 0 10.5657 0 10.5C0 10.4343 0.0129493 10.3692 0.0381083 10.3084C0.0632674 10.2477 0.100144 10.1925 0.146631 10.146L5.29363 5H3.50063C3.36802 5 3.24085 4.94732 3.14708 4.85355C3.05331 4.75979 3.00063 4.63261 3.00063 4.5C3.00063 4.36739 3.05331 4.24021 3.14708 4.14645C3.24085 4.05268 3.36802 4 3.50063 4H6.50063C6.56611 3.99974 6.63101 4.01239 6.69159 4.03724C6.75218 4.06208 6.80727 4.09863 6.85371 4.1448C6.90015 4.19096 6.93704 4.24583 6.96225 4.30627C6.98746 4.3667 7.0005 4.43152 7.00063 4.497"
+            fill="#40587C"
+          />
+        </svg>
+      </a>
+    </button>
+    <button class="l-header__contents --nav" id="navbtn">all contents</button>
   </div>
   <nav class="l-nav">
     <div class="l-nav__title">
-      <div class="l-nav__heading">全てのコンテンツ</div>
+      <div class="l-nav__heading">all contents</div>
     </div>
 
     <ul class="l-nav__list">
       <li class="l-nav__item">
-        <a href="/works/works01/index.html" class="l-nav__item-inner">
+        <a href="/<%= jsonData.pages.works01.slug %>" class="l-nav__item-inner">
           <figure class="l-nav__image">
             <img
-              src="<%= path %>assets/images/top/screencapture01.png"
+              src="<%= path %><%= jsonData.pages.works01.image %>"
               alt="work.01"
             />
           </figure>
@@ -65,42 +77,59 @@
         </a>
       </li>
       <li class="l-nav__item">
-        <a href="/works/works02/index.html" class="l-nav__item-inner">
+        <a href="/<%= jsonData.pages.works02.slug %>" class="l-nav__item-inner">
           <figure class="l-nav__image">
             <img
-              src="<%= path %>assets/images/top/screencapture01.png"
+              src="<%= path %><%= jsonData.pages.works02.image %>"
               alt="work.01"
             />
           </figure>
           <div class="l-nav__body">
             <div class="l-nav__desc-heading">技術ブログ</div>
-            <div class="l-nav__desc">Next.js</div>
-            <div class="l-nav__desc">microCMS</div>
+            <div class="l-nav__desc">
+              <span>Next.js</span>
+              <span>microCMS</span>
+              </div>
           </div>
         </a>
       </li>
       <li class="l-nav__item">
-        <a href="/works/works03/index.html" class="l-nav__item-inner">
+        <a href="/<%= jsonData.pages.works03.slug %>" class="l-nav__item-inner">
           <figure class="l-nav__image">
             <img
-              src="<%= path %>assets/images/top/screencapture01.png"
+              src="<%= path %><%= jsonData.pages.works03.image %>"
               alt="work.01"
             />
           </figure>
           <div class="l-nav__body">
             <div class="l-nav__desc-heading">ポートフォリオ</div>
-            <div class="l-nav__desc">EJS</div>
-            <div class="l-nav__desc">webpack</div>
+            <div class="l-nav__desc">
+              <span>EJS</span>
+              <span>webpack</span>
+              </div>
           </div>
         </a>
       </li>
       <li class="l-nav__item">
-        <a href="/about/index.html" class="l-nav__item-inner">
+        <a href="/<%= jsonData.pages.about.slug %>" class="l-nav__item-inner">
           <figure class="l-nav__image">
-            <img
-              src="<%= path %>assets/images/top/screencapture01.png"
+            <picture>
+              <source
+                srcset="<%= path %>assets/images/about/author0228_filter.webp"
+                type="image/webp"
+              />
+              <img
+                srcset="<%= path %>assets/images/about/author0228_filter.png"
+                alt="作者近影"
+                width="400"
+                height="500"
+              />
+            </picture>
+
+            <!-- <img
+              src="<%= path %><%= jsonData.pages.about.image %>"
               alt="work.01"
-            />
+            /> -->
           </figure>
           <div class="l-nav__body">
             <div class="l-nav__desc-heading">about</div>

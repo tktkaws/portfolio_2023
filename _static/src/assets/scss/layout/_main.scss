@@ -1,0 +1,67 @@
+@use "./../foundation/global" as *;
+
+.l-main {
+  top: 4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 4rem;
+  position: relative;
+  display: grid;
+  &__title {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+    position: relative;
+  }
+  &__title img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    @include mq(lg) {
+    }
+    @include mq(md) {
+      width: 12rem;
+    }
+    @include mq(sm) {
+    }
+  }
+  &__loop {
+    overflow: hidden;
+    grid-row: 1/1;
+    grid-column: 1/1;
+  }
+}
+
+.l-main::before{
+  content: "";
+  display: block;
+  background-color: $c-base;
+
+  z-index: 3;
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  width: calc(1rem + 1px);
+  height: calc(100vh - 8rem + 1px);
+  border-right: 1px solid;
+
+
+
+}
+.l-main::after{
+  content: "";
+  display: block;
+  background-color: $c-base;
+
+
+  z-index: 2;
+  position: fixed;
+  top: calc(5rem + 2px);
+  top: 4rem;
+  left: calc(100% - 1rem - 1px);
+  width: calc(1rem + 1px);
+  height: calc(100vh - 8rem + 1px);
+  border-left: 1px solid;
+
+
+}

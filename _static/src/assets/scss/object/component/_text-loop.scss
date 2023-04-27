@@ -7,7 +7,6 @@
   display: block;
   &__textWrap {
     position: absolute;
-    // bottom: 0;
     top: 22px;
     display: block;
     overflow: hidden;
@@ -58,7 +57,13 @@
 .loop__box img {
   // min-width: 100vw;
   // 高さ調節
-  min-width: 2500px;
+  min-width: 3000px;
+  @include mq(xl) {
+    min-width: 2500px;
+  }
+  @include mq(md) {
+    min-width: 1600px;
+  }
   // min-width: 120vw;
 }
 .loop__box img:first-child {
