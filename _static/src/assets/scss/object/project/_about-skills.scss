@@ -1,0 +1,147 @@
+@use "./../../foundation/global" as *;
+.p-about-skills {
+  flex: 1;
+  height: 100%;
+  @include mq(md) {
+    grid-template-rows: 6rem 18rem 18rem;
+    padding-top: 0;
+    height: 100%;
+  }
+
+  &__title {
+    border-bottom: solid 1px;
+    display: grid;
+    justify-content: left;
+    align-content: center;
+    padding-left: 2rem;
+  }
+  &__heading {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: fluid(28, 36, 1441, 2550);
+    font-weight: bold;
+
+    @include mq(xl) {
+      font-size: 28px;
+    }
+    @include mq(lg) {
+      font-size: 20px;
+    }
+    @include mq(md) {
+      font-size: 24px;
+    }
+  }
+  &__sub-heading {
+    text-transform: uppercase;
+    font-size: fluid(16, 24, 1441, 2550);
+    font-weight: bold;
+
+    @include mq(xl) {
+      font-size: 1rem;
+    }
+  }
+  &__block-wrapper {
+    display: flex;
+    position: relative;
+    @include mq(lg) {
+      flex-direction: column;
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      background-color: $c-main;
+      @include mq(lg) {
+        visibility: hidden;
+      }
+    }
+  }
+  &__block {
+    height: 100%;
+    // min-height: 40rem;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+    padding-bottom: 2rem;
+
+    @include mq(lg) {
+      // min-height: 20rem;
+      padding-bottom: 2rem;
+    }
+  }
+  &__block:first-of-type{
+    // border-right: solid 1px;
+    @include mq(lg) {
+      // border-right: none;
+      border-bottom: solid 1px;
+    }
+  }
+  &__block-heading {
+    padding-top: 2rem;
+    font-size: fluid(48, 60, 1441, 2550);
+    font-weight: bold;
+    @include mq(xl) {
+      font-size: 2rem;
+
+    }
+  }
+  &__block-subHeading {
+    text-transform: uppercase;
+    font-size: fluid(28, 36, 1441, 2550);
+    font-weight: bold;
+    @include mq(xl) {
+      font-size: 1rem;
+    }
+  }
+
+  &__list{
+
+    @include mq(xl) {
+    }
+    @include mq(md) {
+      padding-top: 1rem;
+    }
+  }
+  &__wrapper{
+    padding-bottom: 1rem;
+    @include mq(xl){
+      width: 100%;
+      padding-right: 2rem;
+
+    }
+  }
+  &__term {
+    font-size: fluid(16, 16, 1441, 2550);
+    letter-spacing: 0.2em;
+
+    padding-bottom: 0.5rem;
+    @include mq(xl) {
+      font-size: 16px;
+    }
+    @include mq(lg) {
+      font-size: 16px;
+    }
+    @include mq(md) {
+      font-size: 16px;
+    }
+  }
+  &__desc {
+    font-size: fluid(16, 16, 1441, 2550);
+    letter-spacing: 0.1em;
+    line-height: 2;
+
+    @include mq(xl) {
+      font-size: 16px;
+    }
+    @include mq(md) {
+      font-size: 12px;
+    }
+  }
+
+}
