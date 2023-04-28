@@ -5,10 +5,6 @@
     <figure class="l-header__logo">
       <a href="/">
         <%- include('./_logo', {pageId:pageId }) %>
-        <!-- <img
-          src="<%= path %>assets/images/common/logo0225.svg"
-          alt="サイトロゴ"
-        /> -->
       </a>
     </figure>
     <div class="l-header__text-area">
@@ -56,87 +52,60 @@
     </button>
     <button class="l-header__contents --nav" id="navbtn">all contents</button>
   </div>
+  <!-- l-nav -->
   <nav class="l-nav">
     <div class="l-nav__title">
-      <div class="l-nav__heading">all contents</div>
+      <div class="l-nav__heading">
+        <img
+                src="<%= path %>assets/images/common/title0225.svg"
+                alt="タカハシタカユキのポートフォリオ"
+              />
+      </div>
     </div>
 
     <ul class="l-nav__list">
-      <li class="l-nav__item">
-        <a href="/<%= jsonData.pages.works01.slug %>" class="l-nav__item-inner">
-          <figure class="l-nav__image">
-            <img
-              src="<%= path %><%= jsonData.pages.works01.image %>"
-              alt="work.01"
-            />
-          </figure>
-          <div class="l-nav__body">
-            <div class="l-nav__desc-heading">架空建設会社サイト</div>
-            <div class="l-nav__desc">WordPress</div>
+      <li class="l-nav__item" id="js-target-01">
+        <a href="/<%= jsonData.pages.works01.slug %>">
+          <div class="l-nav__desc-heading">
+            works01
+          </div>
+          <div class="l-nav__desc-heading">
+            架空建設会社サイト
           </div>
         </a>
       </li>
-      <li class="l-nav__item">
-        <a href="/<%= jsonData.pages.works02.slug %>" class="l-nav__item-inner">
-          <figure class="l-nav__image">
-            <img
-              src="<%= path %><%= jsonData.pages.works02.image %>"
-              alt="work.01"
-            />
-          </figure>
-          <div class="l-nav__body">
-            <div class="l-nav__desc-heading">技術ブログ</div>
-            <div class="l-nav__desc">
-              <span>Next.js</span>
-              <span>microCMS</span>
-              </div>
+      <li class="l-nav__item" id="js-target-02">
+        <a href="/<%= jsonData.pages.works02.slug %>">
+          <div class="l-nav__desc-heading">
+            works02
+          </div>
+          <div class="l-nav__desc-heading">
+            技術ブログ
           </div>
         </a>
       </li>
-      <li class="l-nav__item">
-        <a href="/<%= jsonData.pages.works03.slug %>" class="l-nav__item-inner">
-          <figure class="l-nav__image">
-            <img
-              src="<%= path %><%= jsonData.pages.works03.image %>"
-              alt="work.01"
-            />
-          </figure>
-          <div class="l-nav__body">
-            <div class="l-nav__desc-heading">ポートフォリオ</div>
-            <div class="l-nav__desc">
-              <span>EJS</span>
-              <span>webpack</span>
-              </div>
+      <li class="l-nav__item" id="js-target-03">
+        <a href="/<%= jsonData.pages.works03.slug %>">
+          <div class="l-nav__desc-heading">
+            works03
+          </div>
+          <div class="l-nav__desc-heading">
+            ポートフォリオ
           </div>
         </a>
       </li>
-      <li class="l-nav__item">
-        <a href="/<%= jsonData.pages.about.slug %>" class="l-nav__item-inner">
-          <figure class="l-nav__image">
-            <picture>
-              <source
-                srcset="<%= path %>assets/images/about/author0228_filter.webp"
-                type="image/webp"
-              />
-              <img
-                srcset="<%= path %>assets/images/about/author0228_filter.png"
-                alt="作者近影"
-                width="400"
-                height="500"
-              />
-            </picture>
-
-            <!-- <img
-              src="<%= path %><%= jsonData.pages.about.image %>"
-              alt="work.01"
-            /> -->
-          </figure>
-          <div class="l-nav__body">
-            <div class="l-nav__desc-heading">about</div>
+      <li class="l-nav__item" id="js-target-04">
+        <a href="/<%= jsonData.pages.about.slug %>">
+          <div class="l-nav__desc-heading">
+            about
+          </div>
+          <div class="l-nav__desc-heading">
+            タカハシタカユキ
           </div>
         </a>
       </li>
     </ul>
   </nav>
+  <!-- l-nav -->
 </header>
 <!-- /header -->
