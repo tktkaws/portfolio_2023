@@ -1,0 +1,62 @@
+@use "./../../foundation/global" as *;
+
+.c-card {
+  width: 10rem;
+  border: solid 1px;
+  display: flex;
+  flex-direction: column;
+  @include mq(lg) {
+    width: 10rem;
+  }
+  @include mq(md) {
+    width: 15rem;
+  }
+  &__image {
+    height: 10rem;
+    @include mq(lg) {
+      height: 10rem;
+    }
+    @include mq(md) {
+      height: 15rem;
+    }
+  }
+  &__desc {
+    border-top: 1px solid;
+    padding: 1rem;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.c-text-card {
+  padding-top: 1rem;
+  &__heading{
+    font-size: fluid(16, 16, 1441, 2550);
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    @include mq(xl) {
+      font-size: 16px;
+    }
+    @include mq(lg) {
+      font-size: 16px;
+    }
+    @include mq(md) {
+      font-size: 16px;
+    }
+  }
+  &__desc{
+    font-size: fluid(16, 16, 1441, 2550);
+    letter-spacing: 0.1em;
+    line-height: 2;
+
+    @include mq(xl) {
+      font-size: 16px;
+    }
+    @include mq(md) {
+      font-size: 12px;
+    }
+  }
+}

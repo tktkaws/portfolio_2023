@@ -1,0 +1,53 @@
+@use "./../../foundation/global" as *;
+
+.c-desc {
+  width: 100%;
+  padding-top: 2rem;
+  text-align: left;
+  @include mq(md) {
+
+  }
+
+
+  &__term {
+    font-size: fluid(16, 16, 1441, 2550);
+    letter-spacing: 0.1em;
+
+    padding-bottom: 0.5rem;
+    @include mq(xl) {
+      font-size: 16px;
+    }
+    @include mq(lg) {
+      font-size: 16px;
+    }
+    @include mq(md) {
+      font-size: 16px;
+    }
+  }
+
+  &__desc {
+    font-size: fluid(16, 16, 1441, 2550);
+    letter-spacing: 0.1em;
+    line-height: 2;
+
+
+    @include mq(xl) {
+      font-size: 16px;
+    }
+    @include mq(lg) {
+      font-size: 16px;
+    }
+    @include mq(md) {
+      font-size: 12px;
+    }
+  }
+
+  &__list {
+    padding-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: underline;
+    word-wrap: break-word;
+  }
+}

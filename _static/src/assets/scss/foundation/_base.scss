@@ -9,10 +9,11 @@ html {
 body {
   background-color: $c-base;
   color: $c-main;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.2em;
   font-size: 16px;
   line-height: 1.5;
   font-family: $f-base;
+  overflow-x: hidden;
 }
 
 img,
