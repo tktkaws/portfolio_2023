@@ -12,24 +12,26 @@ jsonData.pages[pageId].path %>
   <meta name="robots" content="noindex,nofollow" />
   <title><%= title %></title>
   <meta name="description" content="<%= description %>" />
-  <meta name="keywords" content="" />
+  <meta name="keywords" content="<%= description %>" />
   <link rel="canonical" href="<%= jsonData.siteInfo.siteUrl %>" />
   <!-- favicon -->
-  <!-- <link
-    rel="shortcut icon"
-    href="<%= path %>assets/images/favicon/favicon.ico"
-  /> -->
   <link
     rel="shortcut icon"
-    href="<%= path %>assets/images/common/logo001.svg"
+    href="<%= path %>assets/images/common/logo_0218.svg"
   />
   <!-- apple-touch-icon -->
   <link
     rel="apple-touch-icon"
     sizes="180x180"
-    href="<%= path %>assets/images/favicon/apple-touch-icon.png"
+    href="<%= path %>assets/images/common/logo_0218.svg"
   />
   <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap"
+    rel="stylesheet"
+  />
   <!-- style.css -->
   <link rel="stylesheet" href="<%= path %>assets/css/style.css" />
   <!-- Remove "outline" when in focus(other than keyboard operation) -->

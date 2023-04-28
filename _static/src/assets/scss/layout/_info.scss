@@ -3,43 +3,42 @@
 .l-info {
   padding-inline: 1rem;
   background-color: $c-base;
-  z-index: 2;
+  z-index: 1;
   position: fixed;
-  top: calc(6rem + 2px);
+  top: 4rem;
+  left: 1rem;
+  height: calc(100vh - 8rem);
   width: 30rem;
-  @include mq(xl) {
-    width: 24rem;
-  }
-  @include mq(md) {
-    width: 100%;
-    width: calc(100% - 4rem);
-
-    height: 100%;
-    border-bottom: 1px solid;
-    position: relative;
-    z-index: 0;
-  }
-
-  left: 2rem;
-  height: calc(100vh - 8rem - 3px);
-  overflow-y: scroll;
+  overflow: auto;
   &::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
   border-right: 1px solid;
-  border-left: 1px solid;
+  @include mq(xl) {
+    width: 24rem;
+  }
+  @include mq(md) {
+    padding-inline: 2rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid;
+    position: initial;
+    z-index: 0;
+    height: auto;
+  }
+
+
+
   &__inner {
     width: 100%;
-
-    height: calc(100vh - 12rem);
-    height: calc(100vh - 28rem);
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
     -webkit-box-align: center;
-    align-items: center;
+    align-items: left;
   }
   &__title {
   }
@@ -51,9 +50,8 @@
     opacity: 0.2;
   }
   &__image {
-    width: 96%;
+    height: 14rem;
     aspect-ratio: 1/1;
-    margin: 0 auto;
     padding-bottom: 1rem;
   }
 }

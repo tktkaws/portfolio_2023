@@ -3,9 +3,6 @@
   &__area {
     overflow: hidden;
     @include mq(md) {
-      margin-top: 6rem;
-      padding-top: 2rem;
-
       overflow: auto;
     }
   }
@@ -13,7 +10,7 @@
     display: flex;
     @include mq(md) {
       flex-direction: column;
-      gap: 2rem;
+      // gap: 2rem;
     }
   }
 
@@ -56,39 +53,36 @@
   }
 
   &__item.first {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    // background-color: white;
+    // background-color: $c-main;
 
-    padding-left: 32rem;
+    // padding-left: 32rem;
+    margin-left: 32rem;
     @include mq(xl) {
-      padding-left: 26rem;
-      // margin-left: 26rem;
+      // padding-left: 26rem;
+      margin-left: 26rem;
     }
     @include mq(lg) {
-      flex-direction: column;
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      // flex-direction: column;
+      // padding-top: 6rem;
+      // padding-bottom: 6rem;
     }
     @include mq(md) {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      margin-left: 0;
       padding-left: 2rem;
       padding-right: 2rem;
     }
   }
 
   &__item.center {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    // display: flex;
+    // justify-content: space-evenly;
+    // align-items: center;
 
     @include mq(md) {
-      flex-direction: column;
-      justify-content: left;
-      align-items: left;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      // flex-direction: column;
+      // justify-content: left;
+      // align-items: left;
       padding-left: 2rem;
       padding-right: 2rem;
     }
@@ -97,22 +91,14 @@
   &__item.last {
     // background-color: $c-main;
     // color: $c-base;
-    padding-left: 32rem;
+    // padding-left: 32rem;
     @include mq(xl) {
-      padding-left: 26rem;
+      // padding-left: 26rem;
     }
     @include mq(md) {
       padding-left: 2rem;
       padding-right: 2rem;
       // visibility: hidden;
-    }
-  }
-
-  &__mv {
-    width: 94%;
-    height: calc(100vh - 16rem);
-    @include mq(md) {
-      height: 100%;
     }
   }
 }

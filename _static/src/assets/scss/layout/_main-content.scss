@@ -1,0 +1,37 @@
+@use "./../foundation/global" as *;
+
+.l-main-content {
+  margin-left: 30rem;
+  width: calc(100% - 30rem);
+
+  @include mq(xl) {
+    margin-left: 24rem;
+    width: calc(100% - 24rem);
+  }
+  @include mq(lg) {
+  }
+  @include mq(md) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.l-main-content__block {
+  border-bottom: 1px solid;
+}
+.l-main-content__block-heading {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid;
+
+  font-size: fluid(28, 36, 1441, 2550);
+  font-weight: bold;
+  @include mq(xl) {
+    font-size: 28px;
+  }
+  @include mq(lg) {
+    font-size: 20px;
+  }
+  @include mq(md) {
+    font-size: 16px;
+  }
+}
