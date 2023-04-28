@@ -1,0 +1,137 @@
+@use "./../../foundation/global" as *;
+.p-about-timeline {
+  // & > * {
+  //   border: solid 1px;
+  // }
+  // & > * > * {
+  //   border: solid 1px;
+  // }
+  // background-color: white;
+  display: grid;
+  grid-template-rows: min(15vh, 10rem) 1fr;
+  grid-template-columns: 25% 25% 25% 25%;
+  @include mq(xl) {
+    grid-template-rows: 6rem 12rem 12rem 12rem 12rem;
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    height: 100%;
+  }
+
+  &__title {
+    grid-row: 1/1;
+    grid-column: 1/-1;
+    border-bottom: solid 1px;
+    display: grid;
+    justify-content: left;
+    align-content: center;
+    padding-left: 2rem;
+  }
+  &__heading {
+    font-size: fluid(28, 36, 1441, 2550);
+    font-weight: bold;
+
+    @include mq(xl) {
+      font-size: 28px;
+    }
+    @include mq(lg) {
+      font-size: 20px;
+    }
+    @include mq(md) {
+      font-size: 16px;
+    }
+  }
+  &__block {
+    min-height: 30rem;
+    border-bottom: solid 1px;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    @include mq(xl) {
+      min-height: 10rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 2rem;
+    }
+  }
+  &__block-title {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+  &__block-heading {
+    text-align: center;
+    font-size: fluid(56, 72, 1441, 2550);
+    font-weight: bold;
+
+    @include mq(xl) {
+      font-size: 56px;
+    }
+    @include mq(lg) {
+      font-size: 20px;
+    }
+    @include mq(md) {
+      font-size: 32px;
+    }
+  }
+  &__block-subHeading {
+    text-align: center;
+    font-size: fluid(28, 36, 1441, 2550);
+    font-weight: bold;
+
+    @include mq(xl) {
+      font-size: 28px;
+    }
+    @include mq(lg) {
+      font-size: 20px;
+    }
+    @include mq(md) {
+      font-size: 16px;
+    }
+  }
+  &__desc {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    text-align: left;
+    padding-inline: 2rem;
+    @include mq(xl) {
+      width: 40rem;
+      justify-content: left;
+      text-align: left;
+    }
+    @include mq(sm) {
+      width: 32rem;
+      justify-content: left;
+      text-align: left;
+    }
+  }
+  &__desc p {
+    margin-bottom: 10px;
+  }
+}
+
+#timeline01 {
+  border-right: solid 1px;
+  @include mq(md) {
+    border-bottom: solid 1px;
+  }
+}
+#timeline02 {
+  border-right: solid 1px;
+  @include mq(md) {
+    border-bottom: solid 1px;
+  }
+}
+#timeline03 {
+  border-right: solid 1px;
+  @include mq(md) {
+    border-bottom: solid 1px;
+  }
+}
+#timeline04 {
+  @include mq(md) {
+    border-bottom: solid 1px;
+  }
+}

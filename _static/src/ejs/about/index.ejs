@@ -1,0 +1,167 @@
+<% let pageId='about' ; %>
+<% let path=jsonData.pages[pageId].path %>
+<% let cording=jsonData.container.cording; %>
+<% let info=jsonData.info.works01; %>
+
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../common/_head', {pageId:pageId }) %>
+  <body class="home" id="body">
+    <%- include('../common/_header', {pageId:pageId }) %>
+      <!-- main -->
+      <main data-barba="wrapper">
+        <div class="l-main container" data-barba="container" data-barba-namespace="works">
+          <!-- 画面遷移 -->
+          <div class="mask" id="mask"></div>
+          <!-- 画面遷移 -->
+          <article>
+            <div class="l-info">
+              <div class="c-title">
+                <h2>
+                  <div class="c-title__heading">ABOUT</div>
+                </h2>
+                <div class="c-title__desc-wrapper">
+                  <p class="c-title__desc">髙橋孝幸</p>
+                  <p class="c-title__desc">神奈川県平塚市在住</p>
+                  <p class="c-title__desc">1986年生まれ</p>
+                  <p class="c-title__desc">早稲田大学政治経済学部経済学科卒業</p>
+                </div>
+                <div class="c-title__desc-wrapper">
+                  <p class="c-title__desc">大学卒業後20代は飲食店開業を目指していた</p>
+                  <p class="c-title__desc">30代になり倉庫事務職に就職</p>
+                  <p class="c-title__desc">業務でVBAに触れ独学で習得</p>
+                  <p class="c-title__desc">母の大病をきっかけに人生を見つめ直し転職を決意</p>
+                  <p class="c-title__desc">バックエンドエンジニアに転職したが不眠症に陥る</p>
+                  <p class="c-title__desc">療養を経て現在はWeb制作の道を目指している</p>
+                </div>
+              </div>
+              <figure class="l-info__image">
+                <picture>
+                  <source srcset="<%= path %>assets/images/about/author0228.webp" type="image/webp" />
+                  <img srcset="<%= path %>assets/images/about/author0228.png" alt="作者近影" width="400" height="500" />
+                </picture>
+              </figure>
+            </div>
+            <div class="l-main-content">
+              <section class="p-about-skills">
+                <div class="p-about-skills__title">
+                  <h3 class="p-about-skills__heading">技術
+                    <span class="p-about-skills__sub-heading">skills</span>
+                  </h3>
+                </div>
+                <div class="p-about-skills__block-wrapper b-bottom">
+                  <div class="p-about-skills__block">
+                    <h4 class="p-about-skills__heading">環境
+                      <span class="p-about-skills__sub-heading">environment</span>
+                    </h4>
+                    <dl class="p-about-skills__list">
+                      <div class="p-about-skills__wrapper">
+                        <dt class="p-about-skills__term">gulp</dt>
+                        <dd class="p-about-skills__desc">PostCSSでのAutoprefix・WebPでの画像圧縮などを実行</dd>
+                      </div>
+                      <div class="p-about-skills__wrapper">
+                        <dt class="p-about-skills__term">webpack</dt>
+                        <dd class="p-about-skills__desc">クラス化モジュール化をして保守性拡張性を担保</dd>
+                      </div>
+                      <div class="p-about-skills__wrapper">
+                        <dt class="p-about-skills__term">EJS</dt>
+                        <dd class="p-about-skills__desc">jsonから値を取得することでCMSへの移行もスムーズに行える。Astroに移行予定</dd>
+                      </div>
+                      <div class="p-about-skills__wrapper">
+                        <dt class="p-about-skills__term">Git</dt>
+                        <dd class="p-about-skills__desc">ブランチを切り、適切な粒度でコミットし、PRを出す一連の作業が可能</dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div class="p-about-skills__block">
+                    <div class="p-about-skills__block-title">
+                      <h4 class="p-about-skills__heading">開発
+                        <span class="p-about-skills__sub-heading">development</span>
+                      </h4>
+                    </div>
+                    <dl class="p-about-skills__list">
+                      <div class="p-about-skills__wrapper">
+                        <dt class="p-about-skills__term">HTML</dt>
+                        <dd class="p-about-skills__desc">セマンティックなマークアップが基礎的なレベルで可能</dd>
+                      </div>
+                      <div class="p-about-skills__wrapper">
+                        <dt class="p-about-skills__term">CSS</dt>
+                        <dd class="p-about-skills__desc">FLOCSSを使用し保守性拡張性を担保</dd>
+                      </div>
+                      <div class="p-about-skills__wrapper">
+                        <dt class="p-about-skills__term">JavaScript</dt>
+                        <dd class="p-about-skills__desc">GSAP・barba.js・Splide等各種ライブラリを問題なく使用可能</dd>
+                      </div>
+                      <div class="p-about-skills__wrapper">
+                        <dt class="p-about-skills__term">WordPress</dt>
+                        <dd class="p-about-skills__desc">問い合わせフォームやカスタムフィールドの設定、セキュリティ対策を考慮した構築が可能</dd>
+                      </div>
+                    </dl>
+                    <div class="p-about-skills__desc">
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="p-about-skills">
+                <div class="p-about-skills__title">
+                  <h3 class="p-about-skills__heading">特徴
+                    <span class="p-about-skills__sub-heading">feature</span>
+                  </h3>
+                </div>
+                <div class="p-about-skills__block-wrapper b-bottom">
+                  <div class="p-about-skills__block">
+                    <h4 class="p-about-skills__heading">改善
+                      <span class="p-about-skills__sub-heading">improvement</span>
+                    </h4>
+                    <div class="c-text-card">
+                      <h4 class="c-text-card__heading">出退勤チェックを自動化</h4>
+                      <p class="c-text-card__desc">
+                        出退勤チェックは倉庫事務職でのメイン業務の一つでした。
+                        <br />
+                        1日2000人が打刻した出退勤データを出勤シフト毎にフィルターにかけ、
+                        <br />
+                        遅刻や予定外の残業の有無をチェックしていました。
+                        <br />
+                        同じ作業を部署別シフト別で何度も行うため、チェックミスが多発しました。
+                        <br />
+                        そうした状況を改善すべく、部署別シフト別にしていたシートを一つにまとめ、
+                        <br />
+                        遅刻の有無等を判定させるマクロを書きました。
+                        <br />
+                        結果、1日1時間かかっていた作業が10分に短縮されチェックミスは皆無になりました。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="p-about-skills__block">
+                    <h4 class="p-about-skills__heading">継続
+                      <span class="p-about-skills__sub-heading">continuation</span>
+                    </h4>
+                    <div class="c-text-card">
+                      <h4 class="c-text-card__heading">半年以上毎日コミット</h4>
+                      <p class="c-text-card__desc">
+                        コーダーを目指して本格的に学習し始めて半年以上が経ちました。
+                        <br />
+                        2022年8月中旬から現在にかけてほぼ毎日何かしらのコミットをしています。
+                        <br />
+                        平日は2時間、休日は概ね6時間以上はコーディングにあてています。
+                        <br />
+                        通勤時間や昼休みはUdemy等でHTML・CSS・JavaScriptのインプットに充てています。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- l-contents -->
+              <%- include('../common/_contents', {pageId:pageId }) %>
+                <!-- l-contents -->
+            </div>
+          </article>
+        </div>
+      </main>
+
+      <!-- /main -->
+      <%- include('../common/_footer', {pageId:pageId }) %>
+      <%- include('../common/_script', {pageId:pageId }) %>
+  </body>
+
+</html>
