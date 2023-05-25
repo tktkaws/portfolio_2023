@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "@splidejs/splide": "^4.1.4",
     "animejs": "^3.2.1",
     "css-mqpacker": "^7.0.0",

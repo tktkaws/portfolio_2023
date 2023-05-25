@@ -14,13 +14,13 @@
 *--------------------------------------*/
 @use "./layout/header";
 @use "./layout/footer";
-@use "./layout/aside";
 @use "./layout/hero";
 @use "./layout/nav";
 @use "./layout/main";
 @use "./layout/info";
 @use "./layout/scroll";
 @use "./layout/contents";
+@use "./layout/main-content";
 
 /*-------------------
 * component
@@ -34,14 +34,19 @@
 @use "./object/component/timeline";
 @use "./object/component/profile-block";
 @use "./object/component/card";
+@use "./object/component/mask";
 
 /*-------------------
   * project
   -------------------*/
 @use "./object/project/home";
+@use "./object/project/home-mv";
+@use "./object/project/home-highlights";
 @use "./object/project/home-nav";
 @use "./object/project/works";
 @use "./object/project/works-info";
+@use "./object/project/about-skills";
+@use "./object/project/about-timeline";
 
 /*-------------------
   * utility
@@ -50,5 +55,3 @@
 /*-------------------
   * lib
   -------------------*/
-@use "./lib/splide.min.css";
-// @use "./lib/swiper.min.css";
