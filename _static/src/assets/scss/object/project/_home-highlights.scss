@@ -41,24 +41,27 @@
 
 .p-home-highlights__mv {
   flex: 1;
-}
-
-.p-home-highlights__mv a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
-.p-home-highlights__mv img {
-  top: 2rem;
-  left: 2rem;
-  // aspect-ratio: 16/9;
+.p-home-highlights__mv a {
+  overflow: hidden;
   width: calc(100% - 4rem);
   height: calc(100% - 4rem);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  // border: solid 1px;
+}
+
+.p-home-highlights__mv a:hover img {
+  transform: scale(1.02);
+  transition: transform 0.5s ease;
+}
+
+.p-home-highlights__mv img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .p-home-highlights__mv video {
