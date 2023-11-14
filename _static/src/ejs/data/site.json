@@ -65,8 +65,8 @@
       "basic": {
         "title": "架空建設会社サイト",
         "link": "https://f-u-j-i.ink/",
-        "pass": "pass:pass",
-        "user": "user:user"
+        "pass": "パスワード：pass",
+        "user": "ユーザー名：user"
       },
       "term": {
         "position": "担当範囲",
@@ -78,6 +78,7 @@
       "desc": {
         "position": "コーディング , CMS構築",
         "date": "2022.11.01 - 2022.12.30",
+        "time": "(100時間程度)",
         "tech": "EJS , SCSS , JavaScript , git , webpack , vscode , XD",
         "work": "デザインカンプから13Pをコーディングし、WordPressを構築",
         "github": "https://github.com/tktkaws/Fuji_WordPress"
