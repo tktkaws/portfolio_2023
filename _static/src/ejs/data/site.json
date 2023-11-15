@@ -42,6 +42,14 @@
       "slug": "works/works03.html",
       "image": "assets/images/works/portfolio01.png",
       "path": "../"
+    },
+    "works04": {
+      "name": "Works04",
+      "description": "works04",
+      "type": "article",
+      "slug": "works/works04.html",
+      "image": "assets/images/works/construction01.png",
+      "path": "../"
     }
   },
   "container": {
@@ -122,6 +130,29 @@
         "tech": "EJS , SCSS , JavaScript , Git , webpack , vscode , Figma",
         "work": "barba.js,GSAPを使用し非同期遷移と遷移アニメを実装",
         "github": "https://github.com/tktkaws/portfolio_2023"
+      }
+    },
+    "works04": {
+      "basic": {
+        "title": "架空TOEFL学習塾サイト",
+        "link": "https://tktk.space/",
+        "pass": "パスワード：pass",
+        "user": "ユーザー名：user"
+      },
+      "term": {
+        "position": "担当範囲",
+        "date": "製作期間",
+        "tech": "使用技術",
+        "work": "実装内容",
+        "github": "Github"
+      },
+      "desc": {
+        "position": "コーディング , CMS構築",
+        "date": "2023.11.01 - 2023.11.14",
+        "time": "(50時間程度)",
+        "tech": "Astro , Vite , JavaScript , Git , vscode , XD",
+        "work": "デザインカンプから7Pをコーディングし、WordPressを構築",
+        "github": "https://github.com/tktkaws/engress_wordpress"
       }
     },
     "about": {

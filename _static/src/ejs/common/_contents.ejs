@@ -3,7 +3,6 @@
   <div class="l-contents" id="contents">
     <div class="l-contents__title">
       <h3 class="p-about-skills__heading">other contents
-        <!-- <span class="p-about-skills__sub-heading">other contents</span> -->
       </h3>
     </div>
     <ul class="l-contents__list" id="l-contents__list">
@@ -43,6 +42,18 @@
                   </a>
                 </li>
                 <% } %>
+                <% if (pageId !="works04" ) { %>
+                  <li class="l-contents__item" id="js-target-04">
+                    <a href="/<%= jsonData.pages.works04.slug %>">
+                      <div class="l-contents__desc-heading">
+                        works04
+                      </div>
+                      <div class="l-contents__desc-heading">
+                        架空TOEFL学習塾サイト
+                      </div>
+                    </a>
+                  </li>
+                  <% } %>
                   <% if (pageId !="about" ) { %>
                     <li class="l-contents__item" id="js-target-04">
                       <a href="/<%= jsonData.pages.about.slug %>">

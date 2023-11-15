@@ -4,6 +4,7 @@
 <% let info = jsonData.info.works01; %>
 <% let info02 = jsonData.info.works02; %>
 <% let info03 = jsonData.info.works03; %>
+<% let info04 = jsonData.info.works04; %>
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('./common/_head', {pageId:pageId }) %>
@@ -254,6 +255,62 @@
             <p class="p-home-highlights__mv">
               <a href="/<%= jsonData.pages.works03.slug %>">
                 <img src="<%= path %>assets/images/top/works03_02.webp" width="240" height="130" loading="lazy" alt="" />
+              </a>
+            </p>
+          </section>
+          <section class="p-home-highlights">
+            <div class="p-home-highlights__info">
+              <div class="c-title">
+                <a href="/<%= jsonData.pages.works04.slug %>">
+                  <h2>
+                    <div class="c-title__heading">
+                      <%= info04.basic.title %>
+                    </div>
+                  </h2>
+                </a>
+              </div>
+              <dl class="c-desc">
+                <div class="c-desc__list">
+                  <dt class="c-desc__term">
+                    <%= info04.term.position %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info04.desc.position %>
+                  </dd>
+                </div>
+                <div class="c-desc__list">
+                  <dt class="c-desc__term">
+                    <%= info04.term.date %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info04.desc.date %>
+                  </dd>
+                </div>
+                <div class="c-desc__list">
+                  <dt class="c-desc__term">
+                    <%= info04.term.tech %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info04.desc.tech %>
+                  </dd>
+                </div>
+                <div class="c-desc__list">
+                  <dt class="c-desc__term">
+                    <%= info04.term.work %>
+                  </dt>
+                  <dd class="c-desc__desc">
+                    <%= info04.desc.work %>
+                  </dd>
+                </div>
+                <div class="p-home-highlights__link">
+                  <a href="/<%= jsonData.pages.works04.slug %>">
+                    <span>詳細を見る</span></a>
+                </div>
+              </dl>
+            </div>
+            <p class="p-home-highlights__mv">
+              <a href="/<%= jsonData.pages.works03.slug %>">
+                <!-- <img src="<%= path %>assets/images/top/works03_02.webp" width="240" height="130" loading="lazy" alt="" /> -->
               </a>
             </p>
           </section>
